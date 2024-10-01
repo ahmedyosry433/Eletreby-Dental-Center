@@ -40,6 +40,37 @@
   justify-content: space-between;
   border-bottom: 1px solid #ccc; }
 
+.slider {
+  height: 60vh; }
+
+.services {
+  background-color: var(--lighterPrimaryColor);
+  padding-bottom: 10rem; }
+
+.appointment {
+  height: 30vh;
+  margin: 1rem 0;
+  background-color: var(--yellowColor);
+  display: flex;
+  align-items: center; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: var(--primaryColor);
+  height: 60vh; }
+
+.section-title {
+  padding: 2rem;
+  margin: 4rem 0;
+  background-color: white;
+  width: 20%;
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--yellowColor); }
+
 .navigation-logo {
   width: 20rem; }
 
@@ -70,9 +101,112 @@
     .navigation__menu-item > a:hover {
       color: var(--primaryColor); }
 
+.services__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6rem; }
+
+.services .card {
+  height: 60rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: end;
+  padding: 3rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem; }
+  .services .card__content {
+    z-index: 1; }
+  .services .card__title {
+    font-size: 3rem;
+    color: black; }
+  .services .card__des {
+    font-size: 2rem;
+    color: black; }
+  .services .card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(190deg, #FFFFFF0D 0%, var(--lightPrimaryColor) 90%);
+    transition: opacity 0.3s ease; }
+
+.services .ca1 {
+  background-image: url(../img/zra3a.jpg);
+  background-size: cover; }
+
+.appointment__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.appointment__text {
+  font-size: 3rem;
+  color: var(--fontColor);
+  margin-bottom: 4rem;
+  text-align: center; }
+
+.appointment__button > a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: var(--primaryColor); }
+  .appointment__button > a:hover {
+    background-color: var(--lightPrimaryColor); }
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.footer__logo > img {
+  width: 35rem; }
+
+.footer__nav-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: 4rem; }
+  .footer__nav-title::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 80%;
+    background-color: white; }
+
+.footer__nav-menu {
+  list-style: none; }
+  .footer__nav-menu > li:not(:last-child) {
+    margin-bottom: 2rem; }
+  .footer__nav-menu > li > a {
+    text-decoration: none;
+    color: var(--yellowColor);
+    font-size: 1.7rem; }
+    .footer__nav-menu > li > a:hover {
+      color: white; }
+
 :root {
-  --fontColor: #636363;
-  --primaryColor: #39a2a5 ; }
+  --fontColor: #525b5a;
+  --primaryColor: #39a2a5 ;
+  --lightPrimaryColor: #93e6e9 ;
+  --lighterPrimaryColor: #c1f2f4 ;
+  --purpleColor: #d883e4;
+  --yellowColor: #f4ce62; }
 
 * {
   margin: 0;
@@ -89,7 +223,7 @@ html {
 
 body {
   font-family: 'Cairo', sans-serif;
-  color: #888;
+  color: var(--fontColor);
   font-size: 1.6rem;
   background-color: #fff;
   font-weight: 400;

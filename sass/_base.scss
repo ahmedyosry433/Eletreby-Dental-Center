@@ -1,6 +1,10 @@
 :root {
-    --fontColor: #636363;
+    --fontColor: #525b5a;
     --primaryColor: #39a2a5 ;
+    --lightPrimaryColor: #93e6e9 ;
+    --lighterPrimaryColor: #c1f2f4 ;
+    --purpleColor: #d883e4;
+    --yellowColor: #f4ce62;
 }
 
 
@@ -21,7 +25,7 @@ html {
 }
 body{
     font-family: 'Cairo', sans-serif;
-	color:#888;
+	color:var(--fontColor);
     font-size: 1.6rem;
     background-color: #fff;
     font-weight: 400;

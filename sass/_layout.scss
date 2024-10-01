@@ -26,3 +26,32 @@
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
 }
+
+.slider {
+    height: 60vh;
+}
+
+// Start Services
+.services {
+    background-color: var(--lighterPrimaryColor);
+    padding-bottom: 10rem;
+}
+// End Services
+// Start Appointments
+.appointment {
+    height: 30vh;
+    margin: 1rem 0;
+    background-color: var(--yellowColor);
+    display: flex;
+    align-items: center;
+}
+// End Appointments
+
+// Start Footer
+.footer{
+    display: flex;
+    align-items: center;
+    background-color: var(--primaryColor);
+    height: 60vh;
+}
+// End Footer
