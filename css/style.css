@@ -1,0 +1,96 @@
+/*
+    0 - 600px:   phone
+    600 - 900px: Tablet portrait
+    900 - 1200px: Tablet Landscape
+    [1200 - 1800px]:  is where our normal styles apply
+    1800px + : Big desktop
+
+
+    $breakpoint argument choices : 
+    -  phone
+    -  tab-port
+    -  tab-land
+    -  big-desktop
+    OEDER: base + typography > Genral layout > grid > page layout > components
+
+    1em = 1px
+    */
+.container {
+  width: 80%;
+  padding: 0 1.5rem;
+  margin: 0 auto; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      width: 90%;
+      padding: 0 1.5rem;
+      margin: 0 auto; } }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      width: 95%;
+      padding: 0;
+      margin: 0 auto; } }
+
+.navigation {
+  margin-top: 2rem;
+  padding: 5rem 0;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc; }
+
+.navigation-logo {
+  width: 20rem; }
+
+.navigation__menu {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  justify-content: space-between; }
+  .navigation__menu-item > a {
+    text-decoration: none;
+    color: var(--fontColor);
+    position: relative;
+    height: 100%;
+    padding: 3.5rem 1.2rem;
+    border-radius: 5px 5px 0 0; }
+    .navigation__menu-item > a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background-color: var(--primaryColor);
+      transition: width 0.3s ease;
+      border-radius: 5px 5px 0 0; }
+    .navigation__menu-item > a:hover::before {
+      width: 100%; }
+    .navigation__menu-item > a:hover {
+      color: var(--primaryColor); }
+
+:root {
+  --fontColor: #636363;
+  --primaryColor: #39a2a5 ; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Cairo', sans-serif;
+  color: #888;
+  font-size: 1.6rem;
+  background-color: #fff;
+  font-weight: 400;
+  direction: rtl; }
