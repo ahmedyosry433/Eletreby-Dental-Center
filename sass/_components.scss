@@ -22,31 +22,39 @@
         &-item  {
 
             & > a {
-                text-decoration: none;
-                color: var(--fontColor);
-                position: relative;
-                height: 100%;
-                padding: 3.5rem 1.2rem;
-                border-radius: 5px 5px 0 0;    
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    height: 3px;
-                    width: 0;
-                    background-color: var(--primaryColor);
-                    transition: width 0.3s ease;
-                    border-radius: 5px 5px 0 0;
+                
+                &,
+                &:active,
+                &:visited,
+                &:link{
+                    text-decoration: none;
+                    color: var(--fontColor);
+                    position: relative;
+                    height: 100%;
+                    padding: 3.5rem 1.2rem;
+                    border-radius: 5px 5px 0 0; 
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 3px;
+                        width: 0;
+                        background-color: var(--primaryColor);
+                        transition: width 0.3s ease;
+                        border-radius: 5px 5px 0 0;
+            
+                    }
+                    &:hover::before {
+                        width: 100%;
+                    }
+                    &:hover {
+                        color: var(--primaryColor);
         
+                    }
                 }
-                &:hover::before {
-                    width: 100%;
-                }
-                &:hover {
-                    color: var(--primaryColor);
-    
-                }
+                   
+                
             }
             
         }
@@ -117,7 +125,7 @@
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: space-between;
     }
     
@@ -126,15 +134,17 @@
         color: var(--fontColor);
         margin-bottom: 4rem;
         text-align: center;
+        word-spacing: 3px;
     }
     &__button {
-        
+     
         & > a {
+            
             text-decoration: none;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.5rem 4rem;
             border-radius: 5px;
-            background-color: var(--primaryColor);
+            background-color: var(--primaryColor);            
 
             &:hover {
                 background-color: var(--lightPrimaryColor);
@@ -146,7 +156,7 @@
 .footer{
     &__content {
         display: flex;
-        align-items: center;
+        
         justify-content: space-between;
     }
     &__logo > img{
@@ -174,7 +184,18 @@
         }
         &-menu {
             list-style: none;
+                                font-size: 1.7rem;
+
+            color: var(--yellowColor);
+
+
             & > li {
+                display: flex;
+                align-items: start;
+                & >img {
+                    width: 2.5rem;
+                    margin-left: 1rem;
+                }
                 &:not(:last-child) {
                     margin-bottom: 2rem;
                 }
@@ -189,6 +210,10 @@
                 }
             }
         }
+    }
+
+    .branchs {
+        width: 30%;
     }
 }
 // End Footer
