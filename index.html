@@ -13,6 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper Libarary -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
 
     <!-- Tijwal Font -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,10 +52,76 @@
     <!-- Start Main -->
     <main>
         <!-- Start Slider -->
-        <section class="slider">
+        <section class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/slide1.jpg" alt="Slide 1">
 
+                    </div>
+                    <div class="swiper-slide"><img src="img/slide2.jpg" alt="Slide 2"></div>
+                    <div class="swiper-slide"><img src="img/slide3.jpg" alt="Slide 3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </section>
         <!-- End Slider -->
+
+        <!-- Start Why To Choose Us -->
+        <section class="why-choose">
+            <div class="container">
+                <div class="section-title">
+                    <h2>لماذا تختارنا؟</h2>
+
+                </div>
+                <div class="why-choose__cards">
+
+                    <div class="card-why">
+                        <div class="card-why__content">
+                            <i class="fa-solid fa-user-doctor card-why__icon"></i>
+                            <h3 class="card-why__title">كفاءة الطاقم الطبي</h3>
+                            <p class="card-why__des">كفاءة الأطباء داخل عيادة الأسنان هي الأساس للحصول على السمعة
+                                والشهرة للعيادة وتقييمها لتكون أفضل مركز أسنان، وذلك لأنه لا قيمة لسعر الخدمة ولا
+                                للمعاملة داخل العيادة بدون الكفاءة والنتيجة التي يحصل عليها المريض، كما أنها الأساس الذي
+                                يبنى عليه كثير من مميزات الأخرى.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-why">
+                        <div class="card-why__content">
+                            <i class="fas fa-first-aid card-why__icon"></i>
+                            <h3 class="card-why__title">نظافة وتعقيم عيادة الأسنان</h3>
+                            <p class="card-why__des">الشكل العام لعيادة الأسنان هو أول شيء تقع عليه عين المريض، ولأن
+                                الانطباع الأول دائماً ما يدوم فلابد من الاهتمام بالنظافة العامة لعيادة الأسنان من مقاعد
+                                ومرافق وغيرها.</p>
+                        </div>
+                    </div>
+                    <div class="card-why">
+                        <div class="card-why__content">
+                            <i class="fas fa-heartbeat card-why__icon"></i>
+                            <h3 class="card-why__title">التخصص</h3>
+                            <p class="card-why__des">مع تطور التقنيات الخاصة بطب الأسنان أصبح من شبه المستحيل أن يقوم
+                                طبيب أسنان واحد بجميع التخصصات، كما أن التخصص دليل على المهارة والحرفية، لهذا لابد من
+                                وجود أكثر من طبيب داخل مركز وعيادة الأسنان لكل منهم تخصص منفصل،</p>
+                        </div>
+                    </div>
+
+                    <div class="card-why">
+                        <div class="card-why__content">
+                            <i class="fa-solid fa-laptop-medical card-why__icon"></i>
+                            <h3 class="card-why__title">استخدام أحدث التقنيات والأجهزة الطبية</h3>
+                            <p class="card-why__des">العلم والتكنولوجيا في تطور هائل، لذلك لابد من مواكبة هذا التطور
+                                داخل عيادة الأسنان لضمان أفضل النتائج للمرضى.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- End Why To Choose Us -->
 
         <!-- Start Services -->
         <section class="services">
@@ -58,51 +131,53 @@
 
                 </div>
                 <div class="services__cards">
-                    <div class="card ca1">
+                    <div class="card">
                         <div class="card__content">
+                            <img src="img/zra3a.jpg" alt="" class="card__img">
                             <h3 class="card__title">زراعة الأسنان</h3>
                             <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
                         </div>
                     </div>
-                    <div class="card ca1">
+
+                    <div class="card ">
                         <div class="card__content">
-                            <h3 class="card__title">زراعة الأسنان</h3>
+                            <img src="img/white-tooth.jpg" alt="" class="card__img">
+                            <h3 class="card__title">تبيض الأسنان</h3>
                             <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
                         </div>
                     </div>
-                    <div class="card ca1">
+                    <div class="card">
                         <div class="card__content">
-                            <h3 class="card__title">زراعة الأسنان</h3>
+                            <img src="img/slide1.jpg" alt="" class="card__img">
+                            <h3 class="card__title">تنضيف الأسنان</h3>
                             <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
                         </div>
                     </div>
-                    <div class="card ca1">
+                    <div class="card ">
                         <div class="card__content">
-                            <h3 class="card__title">زراعة الأسنان</h3>
+                            <img src="img/white-tooth.jpg" alt="" class="card__img">
+                            <h3 class="card__title">تبيض الأسنان</h3>
                             <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
                         </div>
                     </div>
-                    <div class="card ca1">
+                    <div class="card">
                         <div class="card__content">
-                            <h3 class="card__title">زراعة الأسنان</h3>
+                            <img src="img/slide1.jpg" alt="" class="card__img">
+                            <h3 class="card__title">تنضيف الأسنان</h3>
                             <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
                         </div>
                     </div>
-                    <div class="card ca1">
+                    <div class="card ">
                         <div class="card__content">
-                            <h3 class="card__title">زراعة الأسنان</h3>
+                            <img src="img/white-tooth.jpg" alt="" class="card__img">
+                            <h3 class="card__title">تبيض الأسنان</h3>
                             <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
                         </div>
                     </div>
-                    <div class="card ca1">
+                    <div class="card">
                         <div class="card__content">
-                            <h3 class="card__title">زراعة الأسنان</h3>
-                            <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
-                        </div>
-                    </div>
-                    <div class="card ca1">
-                        <div class="card__content">
-                            <h3 class="card__title">زراعة الأسنان</h3>
+                            <img src="img/slide1.jpg" alt="" class="card__img">
+                            <h3 class="card__title">تنضيف الأسنان</h3>
                             <p class="card__des">وصف قصير عن خدمة زراعة الأسنان.</p>
                         </div>
                     </div>
@@ -113,25 +188,65 @@
         </section>
         <!-- End Services -->
 
-        <!-- Start Appointments -->
-        <div class="appointment">
-            <div class="container">
-                <div class="appointment__content">
 
-                    <p class="appointment__text"> اختار الفرع الاقرب واحجز الان من خلال الواتساب او الاتصال بنا</p>
-                    <div class="appointment__button">
-                        <a href="#">احجز الان</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Appointments -->
     </main>
+    <!-- Start Appointments -->
+    <div class="container">
+        <div class="form-container">
+            <h2>احجز الان</h2>
+            <form id="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">الاسم</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">الايميل</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="phone">رقم الهاتف</label>
+                </div>
+                <div class="input-group">
+                    <input type="date" id="dateInput" name="dateInput" required>
+                </div>
+
+                <div class="input-group">
+                    <select id="choice" name="choice" required>
+                        <option value="" disabled selected></option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <option value="option4">Option 4</option>
+                    </select>
+                    <label for="choice">اختار التخصص</label>
+                </div>
+
+                <button class="btn" type="submit">احجز</button>
+            </form>
+        </div>
+    </div>
+    <!-- End Appointments -->
+
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__logo">
-                    <img src="img/footer-logo-none-bg.png" alt="Logo">
+                    <img src="img/logo-white.png" alt="Logo">
+
+                    <div class="footer__social">
+
+                        <div class="footer__social-icon">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="footer__social-icon">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+
+                    </div>
                 </div>
                 <div class="footer__nav">
                     <h3 class="footer__nav-title">روابط سريعة</h3>
@@ -145,36 +260,41 @@
                 <div class="footer__nav branchs">
                     <h3 class="footer__nav-title">فروعنا</h3>
                     <ul class="footer__nav-menu">
-                        <li> <img src="img/location-logo.png" alt="">فرع مدينة نصر
+                        <li> <i class="fa-solid fa-location-dot"></i>فرع مدينة نصر
                             مستشفى دار الفؤاد- البرج الطبى- الدور ٧ -عيادة ٧٤٠
                         </li>
-                        <li><img src="img/location-logo.png" alt="">فرع الهرم
+                        <li><i class="fa-solid fa-location-dot"></i>فرع الهرم
                             3 شارع اللبيني -هرم- بعد فندق سياج- اعلي معمل البرج -الدور الرابع</li>
-                        <li> <img src="img/location-logo.png" alt="">فرع حدائق الاهرام البوابة الثالثة (منقرع) -المبني
+                        <li> <i class="fa-solid fa-location-dot"></i>فرع حدائق الاهرام البوابة الثالثة (منقرع) -المبني
                             الإداري امام البوابة مباشرة- اعلي النساجون الشرقيون- الدور الثاني</li>
 
                     </ul>
                 </div>
-                <div class="footer__nav">
-                    <h3 class="footer__nav-title">روابط سريعة</h3>
-                    <ul class="footer__nav-menu">
-                        <li><a href="#">الصفحة الرئيسية</a></li>
-                        <li><a href="#">من نحن</a></li>
-                        <li><a href="#">المركز التابع</a></li>
-                        <li><a href="#">التواصل معنا</a></li>
-                    </ul>
-                </div>
-                <!-- <div class="footer__social">
-                    <ul class="footer__social-menu">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 
-                    </ul>
-                </div> -->
+
             </div>
         </div>
     </footer>
 
     <!-- End Main -->
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper('.swiper-container', {
+            loop: true,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <!-- Script -->
 </body>
 
 </html>
