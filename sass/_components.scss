@@ -2,21 +2,31 @@
     padding: 2rem;
     margin: 4rem 0;
     background-color: white;
-   
     text-align: center;
     font-size: 2.5rem;
     color: var(--fontColor);
+    @include respond (tab-port){
+        font-size: 2rem;
+
+    }
+   
 }
 // Start Navigation
 .navigation {
     &-logo{
         width: 20rem;
+        @include respond (tab-port){
+            width: 10rem;
+        }
     }
     &__menu {
         display: flex;
         list-style: none;
         width: 35%;
         justify-content: space-between;
+        @include respond (tab-port){
+            width: 80%;
+        }
         &-item  {
 
             & > a {
@@ -31,6 +41,10 @@
                     height: 100%;
                     padding: 3.5rem 1.2rem;
                     border-radius: 5px 5px 0 0; 
+                    @include respond (tab-port){
+                        padding: 3.5rem 1.5rem;
+                        font-size: 1.2rem;
+                    }
                     &::before {
                         content: "";
                         position: absolute;
@@ -346,6 +360,11 @@ input:invalid, select:invalid {
         display: flex;
         
         justify-content: space-between;
+        @include respond (phone){
+            flex-direction: column-reverse;
+            align-items: center;
+            
+        }
     }
     &__logo {
         display: flex;
@@ -375,6 +394,10 @@ input:invalid, select:invalid {
                 height: 3px;
                 width: 4rem;
                 background-color: var(--fontColor);
+                @include respond (phone){
+                    right: 50%;
+                    
+                }
             }
         }
         &-menu {
@@ -410,6 +433,11 @@ input:invalid, select:invalid {
 
     .branchs {
         width: 40%;
+        @include respond (phone) {
+            text-align: center;
+            width: 100%;
+
+        }
     }
 
     &__social {

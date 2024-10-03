@@ -74,15 +74,24 @@
   text-align: center;
   font-size: 2.5rem;
   color: var(--fontColor); }
+  @media only screen and (max-width: 56.25em) {
+    .section-title {
+      font-size: 2rem; } }
 
 .navigation-logo {
   width: 20rem; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation-logo {
+      width: 10rem; } }
 
 .navigation__menu {
   display: flex;
   list-style: none;
   width: 35%;
   justify-content: space-between; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__menu {
+      width: 80%; } }
   .navigation__menu-item > a, .navigation__menu-item > a:active, .navigation__menu-item > a:visited, .navigation__menu-item > a:link {
     text-decoration: none;
     color: var(--fontColor);
@@ -90,6 +99,10 @@
     height: 100%;
     padding: 3.5rem 1.2rem;
     border-radius: 5px 5px 0 0; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__menu-item > a, .navigation__menu-item > a:active, .navigation__menu-item > a:visited, .navigation__menu-item > a:link {
+        padding: 3.5rem 1.5rem;
+        font-size: 1.2rem; } }
     .navigation__menu-item > a::before, .navigation__menu-item > a:active::before, .navigation__menu-item > a:visited::before, .navigation__menu-item > a:link::before {
       content: "";
       position: absolute;
@@ -309,6 +322,10 @@ input:invalid, select:invalid {
 .footer__content {
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .footer__content {
+      flex-direction: column-reverse;
+      align-items: center; } }
 
 .footer__logo {
   display: flex;
@@ -333,6 +350,9 @@ input:invalid, select:invalid {
     height: 3px;
     width: 4rem;
     background-color: var(--fontColor); }
+    @media only screen and (max-width: 37.5em) {
+      .footer__nav-title::before {
+        right: 50%; } }
 
 .footer__nav-menu {
   list-style: none;
@@ -356,6 +376,10 @@ input:invalid, select:invalid {
 
 .footer .branchs {
   width: 40%; }
+  @media only screen and (max-width: 37.5em) {
+    .footer .branchs {
+      text-align: center;
+      width: 100%; } }
 
 .footer__social {
   width: 30%;
