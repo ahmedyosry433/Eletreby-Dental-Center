@@ -82,6 +82,7 @@
         width:calc(100% / 4)!important;
         object-fit: contain !important;
         border-radius: 1rem;
+        // height: 50rem !important;
        
         &:not(:last-child) {
             margin-left: 2rem;
@@ -150,13 +151,59 @@
 
 }
 // End Why To Choose Us
+// Start Opening Hours
+.opening-hours {
 
+
+    
+    &-branch {
+        background-color: white;
+        border-radius: 2rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    &-days {
+        list-style: none;
+        font-size: 1.7rem;
+        color: var(--primaryColor);
+        margin-top: 2rem;
+    }
+    &-day {
+        display: flex;
+        justify-content: space-evenly;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+}
+.branches {
+    display: grid;
+    
+    grid-template-rows: repeat(15rem);
+    gap: 1rem;
+
+}
+.appoentment {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.content {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+}
+
+// End Opening Hours
 // Start Services
 .services {
     &__cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        gap: 6rem;
+        gap: 10rem;
     }
     .card {
         position: relative;
@@ -204,11 +251,8 @@
 
 // Start Form 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 2rem 0;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    width: 30%;
+
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,7 +268,9 @@
     
 }
 #contact-form {
-    width: 60%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
 }
 
 .input-group {

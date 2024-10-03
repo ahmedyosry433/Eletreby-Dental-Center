@@ -47,6 +47,10 @@
 .swiper {
   padding-top: 10rem; }
 
+.opening-hours {
+  padding-bottom: 5rem;
+  background: linear-gradient(135deg, #eaf2f3 0%, #8bb8b9 40%, #90d3d4 90%); }
+
 .services {
   padding-bottom: 10rem; }
 
@@ -159,10 +163,44 @@
   color: lightgray;
   text-align: center; }
 
+.opening-hours-branch {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  text-align: center; }
+
+.opening-hours-days {
+  list-style: none;
+  font-size: 1.7rem;
+  color: var(--primaryColor);
+  margin-top: 2rem; }
+
+.opening-hours-day {
+  display: flex;
+  justify-content: space-evenly; }
+  .opening-hours-day:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.branches {
+  display: grid;
+  grid-template-rows: repeat(15rem);
+  gap: 1rem; }
+
+.appoentment {
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem; }
+
 .services__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 6rem; }
+  gap: 10rem; }
 
 .services .card {
   position: relative;
@@ -194,11 +232,6 @@
   border-radius: 2rem; }
 
 .form-container {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem 0;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,7 +244,9 @@
     font-weight: 600; }
 
 #contact-form {
-  width: 60%; }
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem; }
 
 .input-group {
   position: relative;
