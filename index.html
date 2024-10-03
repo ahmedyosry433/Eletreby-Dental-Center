@@ -43,6 +43,21 @@
                     <li class="navigation__menu-item"><a href="#">التواصل معنا</a></li>
                 </ul>
 
+
+                <!-- Start Menu -->
+                <div class="menu-container">
+                    <button class="menu-button"><i class="fa-solid fa-bars"></i></button>
+                    <div id="myMenu" class="menu-content">
+                        <a href="#">الصفحة الرئيسية</a>
+                        <a href="#">من نحن</a>
+                        <a href="#">المركز التابع</a>
+                        <a href="#">التواصل معنا</a>
+
+                    </div>
+                </div>
+
+                <!-- End Menu -->
+
             </div>
 
         </div>
@@ -191,6 +206,8 @@
                             </div>
 
                         </div>
+                        <!-- Start Appointments -->
+
                         <div class="appoentment">
                             <h2>احجز الان</h2>
                             <form id="contact-form">
@@ -236,6 +253,8 @@
                                 <button class="btn" type="submit">احجز</button>
                             </form>
                         </div>
+                        <!-- End Appointments -->
+
                     </div>
 
                 </div>
@@ -305,6 +324,7 @@
 
         <!-- Start Our cases  -->
         <section class="swiper">
+
             <div class="section-title">
                 <h2>حالاتنا</h2>
 
@@ -346,60 +366,14 @@
                 </div>
 
             </div>
+
         </section>
         <!-- End Our cases  -->
 
 
     </main>
-    <!-- Start Appointments -->
-    <div class="container">
-        <!-- <div class="form-container">
-            <h2>احجز الان</h2>
-            <form id="contact-form">
-                <div class="input-group">
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">الاسم</label>
-                </div>
 
-                <div class="input-group">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">الايميل</label>
-                </div>
 
-                <div class="input-group">
-                    <input type="tel" id="phone" name="phone" required>
-                    <label for="phone">رقم الهاتف</label>
-                </div>
-                <div class="input-group">
-                    <input type="date" id="dateInput" name="dateInput" required>
-                </div>
-
-                <div class="input-group">
-                    <select id="choice" name="choice" required>
-                        <option value="" disabled selected></option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                        <option value="option4">Option 4</option>
-                    </select>
-                    <label for="choice">اختار التخصص</label>
-                </div>
-                <div class="input-group">
-                    <select id="choice" name="choice" required>
-                        <option value="" disabled selected></option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                        <option value="option4">Option 4</option>
-                    </select>
-                    <label for="choice">اختار الفرع</label>
-                </div>
-
-                <button class="btn" type="submit">احجز</button>
-            </form>
-        </div> -->
-    </div>
-    <!-- End Appointments -->
 
     <footer class="footer">
         <div class="container">
@@ -436,7 +410,8 @@
                         </li>
                         <li><i class="fa-solid fa-location-dot"></i>فرع الهرم
                             3 شارع اللبيني -هرم- بعد فندق سياج- اعلي معمل البرج -الدور الرابع</li>
-                        <li> <i class="fa-solid fa-location-dot"></i>فرع حدائق الاهرام البوابة الثالثة (منقرع) -المبني
+                        <li> <i class="fa-solid fa-location-dot"></i>فرع حدائق الاهرام البوابة الثالثة (منقرع)
+                            -المبني
                             الإداري امام البوابة مباشرة- اعلي النساجون الشرقيون- الدور الثاني</li>
 
                     </ul>
@@ -465,6 +440,22 @@
             },
             effect: 'slide',
             speed: 1000,
+        });
+
+        const menuButton = document.querySelector('.menu-button');
+        const menu = document.getElementById('myMenu');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (!event.target.matches('.menu-button')) {
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+            }
         });
     </script>
     <!-- Script -->
