@@ -73,8 +73,31 @@
             width: 100%;
             height: 80rem;
             object-fit: cover;
+
+
         }
     }
+
+    &-img {
+        width:calc(100% / 4)!important;
+        object-fit: contain !important;
+        border-radius: 1rem;
+       
+        &:not(:last-child) {
+            margin-left: 2rem;
+        }
+    }
+
+    .fl {
+        display: flex;
+        height: 60rem !important;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+
+
+
     &-button-next, &-button-prev {
         background-color: rgba(255, 255, 255, 0.5);
         padding: 3rem 2rem;
@@ -169,6 +192,16 @@
 }
 // End Services
 
+// Start Cases
+.type-case {
+    width: 40rem;
+    height:45rem;
+    background-color: var(--lighterPrimaryColor);
+    margin-left: 2rem;
+    border-radius: 2rem;
+}
+// End Cases
+
 // Start Form 
 .form-container {
     background-color: rgba(255, 255, 255, 0.9);
@@ -231,7 +264,10 @@
         }
 }
 
-
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: var(--primaryColor);
+}
+// BUTTON
 .btn {
     width: 100%;
     padding: 12px;
@@ -247,18 +283,15 @@
         background-color: var(--lightPrimaryColor);
     }
 }
-
-        
-
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
 }
-
 input:invalid, select:invalid {
     animation: shake 0.3s;
 }
+//END BUTTON
 // End Form
 
 // Start Footer
