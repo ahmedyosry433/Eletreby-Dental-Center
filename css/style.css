@@ -402,7 +402,6 @@
   @media only screen and (max-width: 37.5em) {
     .services .card {
       border: 0.5px solid #e3e1e1;
-      padding: 2rem;
       border-radius: 3rem; } }
   .services .card__img {
     width: 100%;

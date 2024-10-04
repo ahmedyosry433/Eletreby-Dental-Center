@@ -274,9 +274,7 @@
             height: 40rem;
             padding: 2rem;
             border-radius: 3rem;
-            
             transition: all 0.3s ease-out;
-
             @include respond (phone) {
                 border: 0.5px solid #e3e1e1;
             }
@@ -466,7 +464,6 @@
 
         @include respond (phone) {
             border: 0.5px solid #e3e1e1;
-            padding: 2rem;
             border-radius: 3rem;
         }
         
