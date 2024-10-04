@@ -164,10 +164,38 @@
             color: white;
             width: 45%;
             text-align: start;
+            @include respond (tab-land){
+                width: 60%;                
+                font-size: 3rem;
+            }
+            @include respond (tab-port){
+                width: 75%;                
+                font-size: 2.7rem;
+            }
+            @include respond (phone){
+                width: 80%;                
+                font-size: 2.2rem;
+            }
+            @media screen and (max-width:400px){
+                width: 90%;                
+                font-size: 1.8rem;
+                top: 40%;
+                right: 5%;
+            }
            & > p {
             font-size: 2.5rem;
             line-height: 1.9;
+            @include respond (phone){
+                              
+                font-size: 2rem;
+                line-height: 1.7;            
+            }
+            @media screen and (max-width:400px){
+                font-size: 1.5rem;
+                line-height: 1.9; 
+            }
            }
+
 
         }
        & img {
