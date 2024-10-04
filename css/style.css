@@ -392,7 +392,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 52rem;
+  height: 43rem;
   transition: all 0.2s ease-in;
   border-radius: 3rem;
   padding: 2rem; }
@@ -413,14 +413,10 @@
     border-bottom-right-radius: 3rem;
     border-bottom-left-radius: 3rem; }
   .services .card__title {
+    padding-top: 2rem;
     font-size: 2.5rem;
     color: var(--primaryColor);
     text-align: center; }
-  .services .card__des {
-    font-size: 1.7rem;
-    color: var(--lightPrimaryColor);
-    text-align: center;
-    padding-bottom: 2rem !important; }
 
 .type-case {
   width: 40rem;
