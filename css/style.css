@@ -317,11 +317,9 @@
     font-weight: bold;
     color: red; }
 
-.opening-hours-days {
-  list-style: none;
-  font-size: 1.7rem;
-  color: var(--primaryColor);
-  margin-top: 2rem; }
+@media only screen and (max-width: 37.5em) {
+  .opening-hours-days {
+    display: none; } }
 
 .opening-hours-day {
   margin: 3rem 0;
@@ -333,6 +331,16 @@
     font-weight: bold;
     font-family: sans-serif;
     color: var(--primaryColor); }
+
+.opening-hours-mob {
+  text-align: center;
+  display: none;
+  font-size: 1.2rem;
+  color: var(--primaryColor);
+  padding: 2rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .opening-hours-mob {
+      display: block; } }
 
 .branches {
   display: grid;
@@ -368,7 +376,7 @@
 
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 4rem; }
 
 .services__cards {
