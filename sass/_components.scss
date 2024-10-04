@@ -271,24 +271,33 @@
     &-branch {
         background-color: white;
         border-radius: 2rem;
-        padding: 2rem;
+        padding: 2rem 0;
+        width: 80%;
         text-align: center;
         position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // box-shadow: 0 5px 10px var(--primaryColor);
+        border: 0.5px solid var(--primaryColor);
+        transition: all 0.3s ease-in    ;
+        @include respond (phone) {
+            width: 100%;
+            text-align: center;
+        }
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 20px 10px var(--lighterPrimaryColor);
             
-            height: 3px;
-            width: 0;
-            background-color: var(--primaryColor);
-            transition: all 0.3s ease-in-out;
         }
-        &:hover::before {
-            width: 90%;
-        }
+
+        & > p {
+            font-size: 1.4rem;
+            padding: 0 3rem;
+            font-weight: bold;
+            color: red;
+        } 
 
         
     }
@@ -299,34 +308,71 @@
         margin-top: 2rem;
     }
     &-day {
+        margin: 3rem 0;
         display: flex;
         justify-content: space-evenly;
         &:not(:last-child) {
             margin-bottom: 2rem;
+        }
+        & span {
+            &:last-child {
+                font-weight: bold;
+                font-family: sans-serif;
+                color: var(--primaryColor);
+            }
         }
     }
 
 }
 .branches {
     display: grid;
-    
-    grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
+    grid-template-rows: repeat(auto-fit,minmax(10rem, 1fr));
     gap: 3rem;
 
 }
+.branch__social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--primaryColor);
+    &-icon {
+        font-size: 2.5rem;
+        margin-right: 1rem;
+        color: var(--primaryColor);
+
+        & > a {
+            text-decoration: none;
+            color: var(--primaryColor);
+
+            &:hover {
+                color: var(--lightPrimaryColor);
+            }
+        }
+        
+    }
+}
+
 .appoentment {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 2rem;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    padding: 3rem;
+    padding: 2rem;
     padding-top: 6rem;
+    border: 0.5px solid var(--primaryColor);
+    transition: all 0.3s ease-in    ;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 20px 10px var(--lighterPrimaryColor);
+        
+    }
 }
 .content {
     display: grid;
-    align-items: start;
+    // align-items: start;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 3rem;
+    gap: 4rem;
 }
 
 // End Opening Hours
