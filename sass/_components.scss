@@ -253,7 +253,9 @@
         font-size: 2rem;
     }
 
-   
+   &-button-next::after, &-button-prev::after {
+        color: var(--primaryColor);
+    }
 }
 
 // End Swiper
@@ -264,6 +266,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         gap: 5rem;
+        @include respond (phone) {
+            gap: 1rem;
+
+        }
         
     }
     .card-why {
@@ -444,7 +450,7 @@
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         gap: 8rem;
         @include respond (phone) {
-            gap: 5rem;
+            gap: 1rem;
         }
     }
     .card {
@@ -569,9 +575,7 @@
        
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
-    color: var(--primaryColor);
-}
+
 // BUTTON
 .btn {
     width: 100%;
