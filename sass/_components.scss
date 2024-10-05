@@ -5,6 +5,7 @@
     text-align: center;
     font-size: 2.5rem;
     color: var(--fontColor);
+    
     @include respond (tab-land){
         font-size: 1.5rem;
         margin: 1rem 0;
@@ -99,7 +100,7 @@
 
 }
 
-
+//Start Mob Menu
 .menu-button {
     background-color: var(--primaryColor);
     color: white;
@@ -141,6 +142,7 @@
 .show {
     display: block;
 }
+// End Mob Menu
 // End Navigation
 
 // Start Swiper
@@ -153,6 +155,7 @@
     &-slide {
 
         position: relative;
+
         .des {
             position: absolute;
             top: 40%;
@@ -164,6 +167,8 @@
             color: white;
             width: 45%;
             text-align: start;
+            animation-name: moveInRight;
+            animation-duration: 2s;
             @include respond (tab-land){
                 width: 60%;                
                 font-size: 3rem;
@@ -259,65 +264,11 @@
 }
 
 // End Swiper
-
-// Start Why To Choose Us
-.why-choose {
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        gap: 5rem;
-        @include respond (phone) {
-            gap: 1rem;
-
-        }
-        
-    }
-    .card-why {
-        &__content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 40rem;
-            padding: 2rem;
-            border-radius: 3rem;
-            transition: all 0.3s ease-out;
-            @include respond (phone) {
-                border: 0.5px solid #e3e1e1;
-            }
-            
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
-                padding: 2rem;
-                border-radius: 3rem;
-            }
-
-        }
-        &__icon {
-            font-size: 10rem;
-            color: var(--lightPrimaryColor);
-            margin-bottom: 2rem;
-        }
-        &__title {
-            font-size: 2rem;
-            color: var(--primaryColor);
-            text-align: center;
-            padding-bottom: 2rem;
-        }
-        &__des {
-            font-size: 1.5rem;
-            color: lightgray;
-            text-align: center;
-        }
-    }
-
-
-}
-// End Why To Choose Us
 // Start Opening Hours
 .opening-hours {
 
-
+    animation-name: moveInTop;
+    animation-duration: 4s;
     
     &-branch {
         background-color: white;
@@ -332,6 +283,8 @@
         // box-shadow: 0 5px 10px var(--primaryColor);
         border: 0.5px solid var(--primaryColor);
         transition: all 0.3s ease-in    ;
+        animation-name: moveInRight;
+        animation-duration: 4s;
 
 
         
@@ -443,8 +396,71 @@
 }
 
 // End Opening Hours
+
+// Start Why To Choose Us
+.why-choose {
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 5rem;
+
+        @include respond (phone) {
+            gap: 1rem;
+
+        }
+        
+    }
+    .card-why {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 40rem;
+            padding: 2rem;
+            border-radius: 3rem;
+            transition: all 0.3s ease-out;
+            @include respond (phone) {
+                border: 0.5px solid #e3e1e1;
+            }
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
+                padding: 2rem;
+                border-radius: 3rem;
+            }
+
+        }
+        &__icon {
+            font-size: 10rem;
+            color: var(--lightPrimaryColor);
+            margin-bottom: 2rem;
+        }
+        &__title {
+            font-size: 2rem;
+            color: var(--primaryColor);
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+        &__des {
+            font-size: 1.5rem;
+            color: lightgray;
+            text-align: center;
+        }
+    }
+
+
+}
+// End Why To Choose Us
+
 // Start Services
 .services {
+    animation-name: moveInBottom;
+    animation-delay: 3s;
+    animation-duration: 5s;
     &__cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -452,6 +468,7 @@
         @include respond (phone) {
             gap: 1rem;
         }
+
     }
     .card {
         position: relative;
@@ -462,6 +479,7 @@
         transition: all 0.2s ease-in; 
         border-radius: 3rem;
         padding: 2rem;
+        
         &:hover {
             transform: translateY(-5px);
             box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
@@ -498,15 +516,7 @@
 }
 // End Services
 
-// Start Cases
-.type-case {
-    width: 40rem;
-    height:45rem;
-    background-color: var(--lighterPrimaryColor);
-    margin-left: 2rem;
-    border-radius: 2rem;
-}
-// End Cases
+
 
 // Start Form 
 .form-container {
