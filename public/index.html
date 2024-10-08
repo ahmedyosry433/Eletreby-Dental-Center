@@ -281,7 +281,7 @@
 
                         <div class="appoentment" id="appientment">
                             <h2>احجز الان</h2>
-                            <form id="contact-form">
+                            <form id="contact-form"  method="post" action="">
                                 <div class="input-group">
                                     <input type="text" id="name" name="name" required>
                                     <label for="name">الاسم</label>
@@ -297,8 +297,8 @@
                                     <label for="phone">رقم الهاتف</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="date" id="dateInput" name="dateInput" required placeholder="ff">
-                                    <label class="date-label" for="dateInput">اختار التاريخ</label>
+                                    <input type="date" id="date" name="date" required placeholder="ff">
+                                    <label class="date-label" for="date">اختار التاريخ</label>
 
                                 </div>
                                 <div class="input-group">
@@ -308,28 +308,30 @@
                                 </div>
 
                                 <div class="input-group">
-                                    <select id="choice" name="choice" required>
+                                    <select id="service" name="service" required>
                                         <option value="" disabled selected>نوع الخدمة</option>
-                                        <option value="option1">تجميل الاسنان</option>
-                                        <option value="option2">زراعة الاسنان</option>
-                                        <option value="option3">علاج الجذور وحشو العصب</option>
-                                        <option value="option4">العلاج التحفظي والحشو</option>
-                                        <option value="option5">تقويم الاسنان</option>
-                                        <option value="option6">طب اسنان الأطفال</option>
-                                        <option value="option7">امراض وتجميل اللثة</option>
-                                        <option value="option8">جراحة الوجه والفكين</option>
-                                        <option value="option9">معمل اسنان متكامل</option>
+                                        <option value="تجميل الاسنان">تجميل الاسنان</option>
+                                        <option value="زراعة الاسنان">زراعة الاسنان</option>
+                                        <option value="علاج الجذور وحشو العصب">علاج الجذور وحشو العصب</option>
+                                        <option value="العلاج التحفظي والحشو">العلاج التحفظي والحشو</option>
+                                        <option value="تقويم الاسنان">تقويم الاسنان</option>
+                                        <option value="طب اسنان الأطفال">طب اسنان الأطفال</option>
+                                        <option value="امراض وتجميل اللثة">امراض وتجميل اللثة</option>
+                                        <option value="جراحة الوجه والفكين">جراحة الوجه والفكين</option>
+                                        <option value="معمل اسنان متكامل">معمل اسنان متكامل</option>
                                     </select>
                                 </div>
+                                
                                 <div class="input-group">
-                                    <select id="choice" name="choice" required>
+                                    <select id="branch" name="branch" required>
                                         <option value="" disabled selected>اختار الفرع</option>
-                                        <option value="option1">فرع مدينة نصر</option>
-                                        <option value="option2">فرع الهرم </option>
-                                        <option value="option3">فرع حدائق الاهرام</option>
-                                        <option value="option4">فرع الدقهلية دماص</option>
+                                        <option value="فرع مدينة نصر">فرع مدينة نصر</option>
+                                        <option value="فرع الهرم">فرع الهرم</option>
+                                        <option value="فرع حدائق الاهرام">فرع حدائق الاهرام</option>
+                                        <option value="فرع الدقهلية دماص">فرع الدقهلية دماص</option>
                                     </select>
                                 </div>
+                                
 
                                 <button class="btn" type="submit">احجز</button>
                             </form>
@@ -620,6 +622,45 @@
                 countrySelect.appendChild(option);
             });
         });
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        date: document.getElementById('date').value,
+        country: document.getElementById('country').value,
+        service: document.getElementById('service').value,
+        branch: document.getElementById('branch').value
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            alert('Form submitted successfully!');
+            // Optionally reset the form
+            this.reset();
+        } else {
+            throw new Error(result.error || 'Failed to submit form');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to submit form. Please try again.');
+    }
+});
+
+
+
+
     </script>
     
     <!-- Script -->
