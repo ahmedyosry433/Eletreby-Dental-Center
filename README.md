@@ -1,6 +1,6 @@
 FIREBASE DEPLOY 
 
 npm install -g firebase-tools
-firebase login login with Ahmed Elkenawy account select eletreby project
+firebase login login with firebase  select eletreby project
 firebase deploy
  
