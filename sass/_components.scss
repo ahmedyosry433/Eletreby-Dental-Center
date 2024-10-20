@@ -70,7 +70,7 @@
     &-item-img {
         height: 70rem;
         @include respond(phone){
-            height: 50rem;
+            height: 45rem;
         }
     }
 }
