@@ -8,6 +8,10 @@
     left:2rem;
     z-index: 1030;
     justify-content: center;
+    @include respond(phone){
+        left: 0.2rem;
+        bottom: 0.2rem;
+    }
 }
 .contact-icon {
     width: 5rem;
@@ -21,6 +25,12 @@
         transform: scale(1.1);
         border: none;
     }
+    @include respond(phone){
+        margin-top: 0.2rem;
+        padding: 0rem;
+        width: 5rem !important;
+        font-size: 1.3rem !important;
+    }
 }
 
 .icon-label {
@@ -28,6 +38,9 @@
     transition: opacity 0.3s, transform 0.3s;
     transform: translateX(10px);
     margin-left: 1rem;
+    @include respond(phone){
+        display: none;
+    }
 }
 .contact-item:hover .icon-label {
     opacity: 1;

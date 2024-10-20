@@ -128,6 +128,10 @@
   left: 2rem;
   z-index: 1030;
   justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .contact-icons {
+      left: 0.2rem;
+      bottom: 0.2rem; } }
 
 .contact-icon {
   width: 5rem;
@@ -140,12 +144,21 @@
     background-color: black;
     transform: scale(1.1);
     border: none; }
+  @media only screen and (max-width: 37.5em) {
+    .contact-icon {
+      margin-top: 0.2rem;
+      padding: 0rem;
+      width: 5rem !important;
+      font-size: 1.3rem !important; } }
 
 .icon-label {
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
   transform: translateX(10px);
   margin-left: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .icon-label {
+      display: none; } }
 
 .contact-item:hover .icon-label {
   opacity: 1;
