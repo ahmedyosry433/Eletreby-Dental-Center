@@ -84,9 +84,15 @@
 .carousel {
   height: 70vh;
   margin-bottom: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .carousel {
+      height: 50rem; } }
 
 .opening-hours {
   padding: 10rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .opening-hours {
+      padding: 0rem 0; } }
 
 .services {
   padding: 10rem 0; }
@@ -160,6 +166,9 @@
 
 .carousel-item-img {
   height: 70rem; }
+  @media only screen and (max-width: 37.5em) {
+    .carousel-item-img {
+      height: 50rem; } }
 
 .opening-hours-branch {
   background-color: white;

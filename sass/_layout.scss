@@ -1,12 +1,17 @@
-
 .carousel {
     height: 70vh;
     margin-bottom: 10rem;
+    @include respond(phone){
+        height: 50rem;
+    }
 }
 
 
 .opening-hours {
-   padding: 10rem 0;
+    padding: 10rem 0;
+    @include respond(phone){
+       padding: 0rem 0;
+}
 }
 
 // Start Services
