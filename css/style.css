@@ -94,11 +94,23 @@
     .opening-hours {
       padding: 0rem 0; } }
 
+.why-choose {
+  padding: 10rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .why-choose {
+      padding: 5rem 0; } }
+
 .services {
   padding: 10rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .services {
+      padding: 5rem 0; } }
 
 .reviews {
   padding: 10rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .reviews {
+      padding: 5rem 0; } }
 
 .footer {
   display: flex;

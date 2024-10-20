@@ -11,16 +11,29 @@
     padding: 10rem 0;
     @include respond(phone){
        padding: 0rem 0;
+    }
 }
+.why-choose {
+    padding: 10rem 0;
+    @include respond(phone){
+        padding: 5rem 0;
+ }
+
 }
 
 // Start Services
 .services {
     padding: 10rem 0;
+    @include respond(phone){
+        padding: 5rem 0;
+    }
 }
 // End Services
 .reviews {
     padding: 10rem 0;
+    @include respond(phone){
+        padding: 5rem 0;
+    }
 }
 
 
