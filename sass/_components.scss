@@ -1,274 +1,79 @@
 .section-title {
-    padding: 2rem;
-    margin: 4rem 0;
-    background-color: white;
     text-align: center;
-    font-size: 2.5rem;
-    color: var(--fontColor);
+    margin-bottom: 5rem;
+}
+.contact-icons {
+    position: fixed;
+    bottom: 2rem;
+    left:2rem;
+    z-index: 1030;
+    justify-content: center;
+}
+.contact-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-top: 10px;
+    transition: transform 0.3s;
+    background-color: #777;
+    &:hover {
+        background-color: black;
+        transform: scale(1.1);
+        border: none;
+    }
+}
+
+.icon-label {
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(10px);
+    margin-left: 1rem;
+}
+.contact-item:hover .icon-label {
+    opacity: 1;
+    transform: translateX(0);
     
-    @include respond (tab-land){
-        font-size: 1.5rem;
-        margin: 1rem 0;
-    }
-    @include respond (tab-port){
-        font-size: 2rem;
-       
-        margin: 1rem 0;
-    }
-    @include respond (phone) {
-        padding: 1rem;
-        font-size: 1.5rem;
-        margin: 1rem 0;
-
-
-    }
-   
 }
 // Start Navigation
-.navigation {
-    &-logo{
-        width: 20rem;
-        @include respond (tab-port){
-            width: 10rem;
-        }
+.navbar.scrolled {
+    background-color: var(--lighterPrimaryColor); 
+    border-bottom: 1px solid white;
+    animation: showHidden 0.7s linear ;
+
+  }
+.nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    color: var(--primaryColor);
+    outline:none
+}
+
+.navbar-toggler {
+    color: var(--primaryColor);
+    border-color:var(--primaryColor) ;
+    &:focus {
+        box-shadow: none;
     }
-    &__menu {
-        display: flex;
-        list-style: none;
-        width: 35%;
-        justify-content: space-between;
-        @media only screen and (max-width:1468px){
-            width: 60%;
-        };
-        @include respond (tab-port){
-            width: 80%;
-        }
-        &-item  {
-
-            & > a {
-                
-                &,
-                &:active,
-                &:visited,
-                &:link{
-                    text-decoration: none;
-                    color: var(--fontColor);
-                    position: relative;
-                    height: 100%;
-                    padding: 3.5rem 1.2rem;
-                    border-radius: 5px 5px 0 0; 
-                    @include respond (tab-port){
-                        padding: 3.5rem 1.5rem;
-                        font-size: 1.2rem;
-                    }
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        height: 3px;
-                        width: 0;
-                        background-color: var(--primaryColor);
-                        transition: width 0.3s ease;
-                        border-radius: 5px 5px 0 0;
-            
-                    }
-                    &:hover::before {
-                        width: 100%;
-                    }
-                    &:hover {
-                        color: var(--primaryColor);
-        
-                    }
-                }
-                   
-                
-            }
-            @include respond (phone){
-                display: none;
-
-
-            }
-
-
-
-            
-        }
-        
-
-    }
-
-}
-
-//Start Mob Menu
-.menu-button {
-    background-color: var(--primaryColor);
-    color: white;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    border: none;
-    border-radius:50%;
-    cursor: pointer;
-    display: none;
-    @include respond (phone){
-        display: block;
-    }
-}
-
-.menu-content {
-    display: none;
-    position: absolute;
-    top: 6.5rem;
-    left: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-}
-
-.menu-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.menu-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.show {
-    display: block;
-}
-// End Mob Menu
-// End Navigation
-
-// Start Swiper
-
-.swiper {
-    &-container {
-        width: 100%;
-    }
+    &[aria-expanded="true"] {
+        border-color:gray ;
+        color: gray;
     
-    &-slide {
-
-        position: relative;
-
-        .des {
-            position: absolute;
-            top: 40%;
-            right: 10%;
-            transform: translateY(-50%);
-            font-size: 3.5rem;
-            z-index: 5;
-            background-color:rgba(142, 140, 140, 0.5);
-            color: white;
-            width: 45%;
-            text-align: start;
-            animation-name: moveInRight;
-            animation-duration: 2s;
-            @include respond (tab-land){
-                width: 60%;                
-                font-size: 3rem;
-            }
-            @include respond (tab-port){
-                width: 75%;                
-                font-size: 2.7rem;
-            }
-            @include respond (phone){
-                width: 80%;                
-                font-size: 2.2rem;
-            }
-            @media screen and (max-width:400px){
-                width: 90%;                
-                font-size: 1.8rem;
-                top: 40%;
-                right: 5%;
-            }
-           & > p {
-            font-size: 2.5rem;
-            line-height: 1.9;
-            @include respond (phone){
-                              
-                font-size: 2rem;
-                line-height: 1.7;            
-            }
-            @media screen and (max-width:400px){
-                font-size: 1.5rem;
-                line-height: 1.9; 
-            }
-           }
-
-
-        }
-       & img {
-            width: 100%;
-            height: 80rem;
-            object-fit: cover;
-            @include respond (phone) {
-                height: 60rem;
-
-            }
-
-
-        }
-    }
-
-    &-img {
-        width:calc(100% / 4)!important;
-        object-fit: contain !important;
-        border-radius: 1rem;
-        @include respond (phone) {
-            width:calc(100% / 4.5)!important;
-
-        }
-     
-       
-        &:not(:last-child) {
-            margin-left: 2rem;
-        }
-    }
-
-    .fl {
-        display: flex;
-        height: 60rem !important;
-        
-        justify-content: space-evenly;
-        align-items: center;
-        @include respond (phone) {
-            height: 15rem !important;
-
-        }
-    }
-
-
-
-
-    &-button-next, &-button-prev {
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 3rem 2rem;
-        transition: all 0.3s ease;
-    }
-    &-button-next:hover, &-button-prev:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-    &-button-next::after, &-button-prev::after {
-        font-size: 2rem;
-    }
-
-   &-button-next::after, &-button-prev::after {
-        color: var(--primaryColor);
     }
 }
-
-// End Swiper
+.logo-img {
+    width: 14rem;
+    margin-left: 8rem;
+}
+// End Navigation
+.carousel {
+    &-item-img {
+        height: 70rem;
+    }
+}
 // Start Opening Hours
 .opening-hours {
 
-    animation-name: moveInTop;
-    animation-duration: 4s;
+   
     
     &-branch {
         background-color: white;
@@ -399,20 +204,7 @@
 
 // Start Why To Choose Us
 .why-choose {
-    animation-name: moveInLeft;
-    animation-duration: 4s;
-    animation-delay: 2s;
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        gap: 5rem;
-
-        @include respond (phone) {
-            gap: 1rem;
-
-        }
-        
-    }
+  
     .card-why {
         &__content {
             display: flex;
@@ -458,53 +250,37 @@
 
 // Start Services
 .services {
-    animation-name: moveInBottom;
-    animation-delay: 3s;
-    animation-duration: 5s;
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        gap: 8rem;
-        @include respond (phone) {
-            gap: 1rem;
-        }
-
-    }
+   
     .card {
-        position: relative;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        height: 43rem;
+        
         transition: all 0.2s ease-in; 
         border-radius: 3rem;
-        padding: 2rem;
-        
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
-         
-        }
-
-        @include respond (phone) {
-            border: 0.5px solid #e3e1e1;
-            border-radius: 3rem;
-        }
-        
+        padding: 1rem;
+        margin-bottom: 3rem;
+        background-color: #f0f0f0;
+        cursor: pointer;
+      
+       &:hover {
+            transform: scale(1.05);
+          }
+ 
         
         &__img {
             width: 100%;
             height: 30rem;
             object-fit: cover;
             border-top-left-radius: 3rem;
-            border-top-right-radius: 0;
+            border-top-right-radius: 3rem;
             border-bottom-right-radius: 3rem;
             border-bottom-left-radius: 3rem;
 
         }
         &__title {
-            padding-top: 2rem;
-            font-size: 2.5rem;
+            padding-top: 3rem;
+            font-size: 2rem;
             color: var(--primaryColor);
             text-align: center;
         }
@@ -515,9 +291,6 @@
    
 }
 // End Services
-
-
-
 // Start Form 
 .form-container {
 
@@ -617,8 +390,6 @@ input:invalid, select:invalid {
     animation: shake 0.3s;
 }
 //END BUTTON
-// End Form
-
 // Start Footer
 .footer{
     &__content {
@@ -743,3 +514,71 @@ input:invalid, select:invalid {
     }
 }
 // End Footer
+//CAESES 
+.box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    &::before{
+        content: attr(data-work);
+        position: absolute;
+        height: calc(100% - 10px);
+        width: calc(100% - 10px);
+        background-color: rgba(10, 86, 81, 0.457);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+        transition: all 0.3s ease-in;
+    
+        font-size: 1.5rem;
+        transform: translateX(calc(-100% - 5px ));
+    } 
+    &:hover::before {
+        transform: translateX(0);
+    
+    }
+}
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .modal-content p {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  /* Close Button */
+  .close-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
