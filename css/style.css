@@ -195,6 +195,33 @@
     .carousel-item-img {
       height: 45rem; } }
 
+.silde-img {
+  max-height: 200px !important;
+  max-width: 25% !important; }
+
+.linar-color {
+  background-image: linear-gradient(to right, #39a2a5, #75a7a8, #b2d1d2); }
+
+.img-container {
+  width: 100%;
+  max-width: 200px;
+  /* Adjust this value as needed */
+  margin: 0 auto;
+  /* Centers the container */ }
+
+.clinic-image {
+  width: 100%;
+  height: 200px;
+  /* Adjust this value as needed */
+  object-fit: cover;
+  /* This maintains aspect ratio and covers the container */
+  object-position: center;
+  /* Centers the image in its container */ }
+
+.blurred-image {
+  filter: blur(3px);
+  /* Apply the blur */ }
+
 .opening-hours-branch {
   background-color: white;
   border-radius: 2rem;

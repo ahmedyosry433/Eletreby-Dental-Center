@@ -118,40 +118,125 @@
     <!-- Start Main -->
     <main>
         <!-- Start Slider -->
-        <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="img/slide1.jpeg" alt="Slide 1" class="d-block w-100 carousel-item-img">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/slide3.jpeg" alt="Slide 3" class=" d-block w-100 carousel-item-img">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slide2.jpeg" alt="Slide 2" class="d-block w-100 carousel-item-img">
+        <!-- Start Landing -->
+        <section class="landing linar-color pt-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner mb-5">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="slide-container img-liner ">
+                                    <img class="d-block rounded img-fluid slide-image " src="img/c-4.jpeg"
+                                        alt="Slider 1">
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000">
+                                <div class="slide-container  img-liner ">
+                                    <img class="d-block rounded img-fluid slide-image  " src="img/c-5.jpeg"
+                                        alt="Slider 2">
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000">
+                                <div class="slide-container  img-liner ">
+                                    <img class="d-block rounded img-fluid slide-image  " src="img/c-3.jpeg"
+                                        alt="Slider 3">
+                                </div>
+                            </div>
 
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center  ">
+                        <h1 class="fs-1 fw-bold pb-5">مركز الاتربي لطب الاسنان</h1>
+                        <p class="fs-6 text-black-50 mb-3 fs-2 pb-5  lh-lg">نقدم لك مركز الاتربي لطب الاسنان علي جميع
+                            الخدمات
+                            التي
+                            نقدمها
+                            لك من
+                            (زراعة
+                            للأسنان & تجميل الأسنان ) وغيرها من الخدمات، يقدمها لك فريق طبي مميز مستخدماً أحدث
+                            التكولوجيا في مجال طب الأسنان.
+                        </p>
+                        <a href="#appointment" class=" btn main-btn rounded-pill border-secondary mb-5">احجز معنا</a>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        </section>
+        <!-- End Landing -->
         <!-- End Slider -->
+         
+        <!-- Start Stuff -->
+        <div class="stuff pt-5" id="stuff">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="image">
+                            <div class=" img-v position-relative">
+                                <div class="img-container">
+                                    <img class=" img-fluid clinic-image blurred-image" src="img/c-4.jpeg" alt="">
+                                </div>
+                                <button id="animatedButton"
+                                    class="animated-button position-absolute top-50 start-50 translate-middle ">
+                                    <i class="fa-solid fa-play "></i>
+                                </button>
+                            </div>
+                            <dialog id="videoDialog">
+                                <button id="closeDialog" class="sticky-top"> <i class="fa-solid fa-xmark"></i></button>
+                                <br>
+                                <video id="videoPlayer" controls>
+                                    <source src="https://youtube.com/shorts/-fNzhoOFxNQ?si=9KuHTUrwSrtDevpA"
+                                        type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </dialog>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mb-4  text-center text-md-end ">
+                        <div class="text">
+                            <h1 class="fw-bold mb-5 lh-lg mt-5">عيادة Dental Town لطب الأسنان</h1>
+                            <p class="text-black-50 fs-3 lh-lg">نبحث دائمًا عن أفضل الطرق لتوفير أفضل الخدمات في
+                                عيادات
+                                Dental Town
+                                لطب الأسنان. فريقنا باستمرار في تطور مستمر لامكانياتهم الطبية، لمواكبة أحدث التطورات.
+                                تعكس
+                                عياداتنا فلسفتنا في تقديم الرعاية المتطورة، مهمتنا هي تطوير علاقات طويلة الأمد مع مرضانا
+                                وضمان الخدمة المتميزة من خلال رعاية شخصية وصادقة وأخلاقية ومستنيرة
 
+                                لان تصميم إبتسامتك مهم جدا, وأكيد التفاصيل بنفرق كتيير علشان تحصل على نتيجة أفضل ومظهر
+                                أقرب
+                                لواقع الأسنان الطبيعية. أحدث المواد المستخدمة للقشرة التجميلية والتركيبات من الإيماكس.
+                                فى
+                                عيادة اسنان Dental Town نخبة من الأطباء المتخصصين في تجميل الأسنان. تصميم للأبتسامة بدقة
+                                واحترافية عالية حتى تتلائم مع ملامحك. نتيجة رائعة ومظهر مثالي مثل الأسنان الطبيعية.
+                                هتمنحك
+                                شعور بالسعادة الداخلية بسبب رجوع ضحكتك الطبيعية مرة أخرى.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Stuff -->
         <!-- Start Opening Hours -->
         <section id="opening-hours" class="opening-hours">
             <div class="opening-hours__content">
@@ -367,76 +452,8 @@
 
         <!-- End Opening Hours -->
 
-        <!-- Start Why To Choose Us -->
-        <section class="why-choose" id="why-choose">
-            <div class="container">
-                <div class="section-title">
-                    <h2 class="fs-1 fw-bold">لماذا تختارنا؟</h2>
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 pb-3">
-                        <div class="card-why">
-                            <div class="card-why__content">
-                                <i class="fa-solid fa-user-doctor card-why__icon"></i>
-                                <h3 class="card-why__title">كفاءة الطاقم الطبي</h3>
-                                <p class="card-why__des">كفاءة الأطباء داخل عيادة الأسنان هي الأساس للحصول على
-                                    السمعة
-                                    والشهرة للعيادة وتقييمها لتكون أفضل مركز أسنان، وذلك لأنه لا قيمة لسعر الخدمة
-                                    ولا
-                                    للمعاملة داخل العيادة بدون الكفاءة والنتيجة التي يحصل عليها المريض، كما أنها
-                                    الأساس الذي
-                                    يبنى عليه كثير من مميزات الأخرى.
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 pb-3">
-                        <div class="card-why">
-                            <div class="card-why__content">
-                                <i class="fas fa-first-aid card-why__icon"></i>
-                                <h3 class="card-why__title">نظافة وتعقيم عيادة الأسنان</h3>
-                                <p class="card-why__des">الشكل العام لعيادة الأسنان هو أول شيء تقع عليه عين المريض،
-                                    ولأن
-                                    الانطباع الأول دائماً ما يدوم فلابد من الاهتمام بالنظافة العامة لعيادة الأسنان
-                                    من مقاعد
-                                    ومرافق وغيرها.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-3 col-md-6 pb-3">
-                        <div class="card-why__content">
-                            <i class="fas fa-heartbeat card-why__icon"></i>
-                            <h3 class="card-why__title">التخصص</h3>
-                            <p class="card-why__des">مع تطور التقنيات الخاصة بطب الأسنان أصبح من شبه المستحيل أن
-                                يقوم
-                                طبيب أسنان واحد بجميع التخصصات، كما أن التخصص دليل على المهارة والحرفية، لهذا
-                                لابد من
-                                وجود أكثر من طبيب داخل مركز وعيادة الأسنان لكل منهم تخصص منفصل،</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 ">
-                        <div class="card-why">
-                            <div class="card-why__content">
-                                <i class="fa-solid fa-laptop-medical card-why__icon"></i>
-                                <h3 class="card-why__title">استخدام أحدث التقنيات والأجهزة الطبية</h3>
-                                <p class="card-why__des">العلم والتكنولوجيا في تطور هائل، لذلك لابد من مواكبة
-                                    هذا التطور
-                                    داخل عيادة الأسنان لضمان أفضل النتائج للمرضى.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Why To Choose Us -->
-
-
         <!-- Start Services -->
         <section class="services" id="services">
-
             <div class="container">
                 <div class="section-title">
                     <h2 class="fs-1 fw-bold">خدماتنا</h2>
@@ -921,6 +938,7 @@
 
     <script>
 
+
         // Close the dropdown menu if the user clicks outside of it
         window.addEventListener('click', (event) => {
             if (!event.target.matches('.menu-button')) {
@@ -962,7 +980,23 @@
                 navbar.classList.remove('scrolled');
             }
         };
+        const button = document.getElementById('animatedButton');
+        const dialog = document.getElementById('videoDialog');
+        const closeButton = document.getElementById('closeDialog');
+        const video = document.getElementById('videoPlayer');
+        // Polyfill for dialog element
+        dialogPolyfill.registerDialog(dialog);
+        // Open dialog and play video when button is clicked
+        button.addEventListener('click', () => {
+            dialog.showModal();
+            video.play();
+        });
 
+        // Close dialog and pause video when close button is clicked
+        closeButton.addEventListener('click', () => {
+            dialog.close();
+            video.pause();
+        });
         //_______________MODEL 1 _____________________________________
         //model Dialog
         // Get the modal, card, and close button elements
