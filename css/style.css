@@ -81,6 +81,12 @@
   75% {
     transform: translateX(5px); } }
 
+@keyframes scaling {
+  0% {
+    background-color: #0a676a37; }
+  100% {
+    background-color: var(--primaryColor); } }
+
 .carousel {
   height: 70vh;
   margin-bottom: 10rem; }
@@ -189,38 +195,79 @@
   width: 14rem;
   margin-left: 8rem; }
 
-.carousel-item-img {
-  height: 70rem; }
-  @media only screen and (max-width: 37.5em) {
-    .carousel-item-img {
-      height: 45rem; } }
-
-.silde-img {
-  max-height: 200px !important;
-  max-width: 25% !important; }
-
 .linar-color {
   background-image: linear-gradient(to right, #39a2a5, #75a7a8, #b2d1d2); }
 
+.slide-image {
+  width: 100%;
+  height: 70rem;
+  object-fit: cover;
+  object-position: center; }
+
+.slide-container {
+  width: 100%;
+  max-width: 80rem;
+  /* Adjust this value as needed */
+  margin: 0 auto;
+  /* Centers the container */ }
+
+.img-liner {
+  padding: 5px;
+  overflow: hidden;
+  position: relative; }
+  .img-liner::before {
+    content: attr(data-work);
+    position: absolute;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    background-color: #c1c0c07d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem; }
+
 .img-container {
   width: 100%;
-  max-width: 200px;
+  max-width: 450px;
   /* Adjust this value as needed */
   margin: 0 auto;
   /* Centers the container */ }
 
 .clinic-image {
   width: 100%;
-  height: 200px;
-  /* Adjust this value as needed */
+  height: 55rem;
   object-fit: cover;
-  /* This maintains aspect ratio and covers the container */
-  object-position: center;
-  /* Centers the image in its container */ }
+  object-position: center; }
 
 .blurred-image {
-  filter: blur(3px);
+  filter: blur(2px);
   /* Apply the blur */ }
+
+.animated-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  animation: scaling 1.5s  infinite; }
+
+.animated-button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+  animation: scaling 0s ease-in-out infinite; }
+
+.animated-button img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 10px; }
 
 .opening-hours-branch {
   background-color: white;
@@ -571,6 +618,25 @@ input:invalid, select:invalid {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 10px; }
+
+.dialog-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  max-width: 90%;
+  max-height: 90%;
+  padding: 0;
+  border: none; }
+
+.dialog-content iframe {
+  width: 100%;
+  height: 600px; }
+
+#closeDialogBtn {
+  background-color: red;
+  color: white; }
 
 :root {
   --fontColor: #525b5a;
