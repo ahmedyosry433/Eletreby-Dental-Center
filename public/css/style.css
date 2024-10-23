@@ -81,6 +81,12 @@
   75% {
     transform: translateX(5px); } }
 
+@keyframes scaling {
+  0% {
+    background-color: #0a676a37; }
+  100% {
+    background-color: var(--primaryColor); } }
+
 .carousel {
   height: 70vh;
   margin-bottom: 10rem; }
@@ -239,7 +245,7 @@
   /* Apply the blur */ }
 
 .animated-button {
-  background-color: var(--primaryColor);
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -255,7 +261,7 @@
 .animated-button:hover {
   background-color: #45a049;
   transform: scale(1.1);
-  animation: scaling 0s ease infinite; }
+  animation: scaling 0s ease-in-out infinite; }
 
 .animated-button img {
   width: 24px;
