@@ -79,13 +79,83 @@
     margin-left: 8rem;
 }
 // End Navigation
-.carousel {
-    &-item-img {
-        height: 70rem;
-        @include respond(phone){
-            height: 45rem;
-        }
-    }
+.linar-color {
+  
+    background-image:linear-gradient(to right, #39a2a5, #75a7a8,#b2d1d2 );
+
+}
+
+
+.slide-image {
+    width: 100%;
+    height: 70rem; 
+    object-fit: cover; 
+    object-position: center; 
+}
+.slide-container {
+    width: 100%;
+    max-width: 80rem; /* Adjust this value as needed */
+    margin: 0 auto; /* Centers the container */
+}
+.img-liner {
+
+    padding: 5px;
+        overflow: hidden;
+        position: relative;
+        &::before{
+            content: attr(data-work);
+            position: absolute;
+            height: calc(100% - 10px);
+            width: calc(100% - 10px);
+            background-color: #c1c0c07d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.5rem;  
+        } 
+}
+.img-container {
+    width: 100%;
+    max-width: 450px; /* Adjust this value as needed */
+    margin: 0 auto; /* Centers the container */
+}
+.clinic-image {
+    width: 100%;
+    height: 55rem; 
+    object-fit: cover; 
+    object-position:center; 
+}
+
+.blurred-image {
+    filter: blur(2px); /* Apply the blur */    
+    
+  }
+  .animated-button {
+    background-color: var(--primaryColor);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    
+    animation: scaling 1.5s  infinite; 
+}
+.animated-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    animation: scaling 0s ease infinite; 
+}
+.animated-button img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 // Start Opening Hours
 .opening-hours {

@@ -80,41 +80,66 @@
     <!-- End Card Info -->
     <!-- Start Main -->
     <main>
-        <!-- Start Slider -->
-        <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+        <!-- Start Landing -->
+        <section class="landing linar-color pt-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner mb-5">
+                            <div class="carousel-item active img-liner" data-bs-interval="10000">
+                                <img src="img/c-eg" class="d-block rounded  w-50" alt="Slider 1">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item img-liner" data-bs-interval="2000">
+                                <img src="img/c-3g" class="d-block  rounded w-50" alt="Slider 2">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item img-liner">
+                                <img src="img/c-" class="d-block  rounded w-50" alt="slider3">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center  ">
+                        <h1 class="fs-1 fw-bold pb-5">مركز الاتربي لطب الاسنان</h1>
+                        <p class="fs-6 text-black-50 mb-3 fs-2 pb-5  lh-lg">نقدم لك مركز الاتربي لطب الاسنان علي جميع
+                            الخدمات
+                            التي
+                            نقدمها
+                            لك من
+                            (زراعة
+                            للأسنان & تجميل الأسنان ) وغيرها من الخدمات، يقدمها لك فريق طبي مميز مستخدماً أحدث
+                            التكولوجيا في مجال طب الأسنان.
+                        </p>
+                        <a href="#appointment" class=" btn main-btn rounded-pill border-secondary mb-5">احجز معنا</a>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="img/slide1.jpeg" alt="Slide 1" class="d-block w-100 carousel-item-img">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/slide3.jpeg" alt="Slide 3" class=" d-block w-100 carousel-item-img">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slide2.jpeg" alt="Slide 2" class="d-block w-100 carousel-item-img">
-
-                </div>
-            </div>
-            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!-- End Slider -->
-
+        </section>
+        <!-- End Landing -->
         <!-- Start Opening Hours -->
         <section id="opening-hours" class="opening-hours">
             <div class="opening-hours__content">
@@ -329,74 +354,6 @@
         </section>
 
         <!-- End Opening Hours -->
-
-        <!-- Start Why To Choose Us -->
-        <section class="why-choose" id="why-choose">
-            <div class="container">
-                <div class="section-title">
-                    <h2 class="fs-1 fw-bold">لماذا تختارنا؟</h2>
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 pb-3">
-                        <div class="card-why">
-                            <div class="card-why__content">
-                                <i class="fa-solid fa-user-doctor card-why__icon"></i>
-                                <h3 class="card-why__title">كفاءة الطاقم الطبي</h3>
-                                <p class="card-why__des">كفاءة الأطباء داخل عيادة الأسنان هي الأساس للحصول على
-                                    السمعة
-                                    والشهرة للعيادة وتقييمها لتكون أفضل مركز أسنان، وذلك لأنه لا قيمة لسعر الخدمة
-                                    ولا
-                                    للمعاملة داخل العيادة بدون الكفاءة والنتيجة التي يحصل عليها المريض، كما أنها
-                                    الأساس الذي
-                                    يبنى عليه كثير من مميزات الأخرى.
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 pb-3">
-                        <div class="card-why">
-                            <div class="card-why__content">
-                                <i class="fas fa-first-aid card-why__icon"></i>
-                                <h3 class="card-why__title">نظافة وتعقيم عيادة الأسنان</h3>
-                                <p class="card-why__des">الشكل العام لعيادة الأسنان هو أول شيء تقع عليه عين المريض،
-                                    ولأن
-                                    الانطباع الأول دائماً ما يدوم فلابد من الاهتمام بالنظافة العامة لعيادة الأسنان
-                                    من مقاعد
-                                    ومرافق وغيرها.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-3 col-md-6 pb-3">
-                        <div class="card-why__content">
-                            <i class="fas fa-heartbeat card-why__icon"></i>
-                            <h3 class="card-why__title">التخصص</h3>
-                            <p class="card-why__des">مع تطور التقنيات الخاصة بطب الأسنان أصبح من شبه المستحيل أن
-                                يقوم
-                                طبيب أسنان واحد بجميع التخصصات، كما أن التخصص دليل على المهارة والحرفية، لهذا
-                                لابد من
-                                وجود أكثر من طبيب داخل مركز وعيادة الأسنان لكل منهم تخصص منفصل،</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 ">
-                        <div class="card-why">
-                            <div class="card-why__content">
-                                <i class="fa-solid fa-laptop-medical card-why__icon"></i>
-                                <h3 class="card-why__title">استخدام أحدث التقنيات والأجهزة الطبية</h3>
-                                <p class="card-why__des">العلم والتكنولوجيا في تطور هائل، لذلك لابد من مواكبة
-                                    هذا التطور
-                                    داخل عيادة الأسنان لضمان أفضل النتائج للمرضى.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Why To Choose Us -->
-
-
         <!-- Start Services -->
         <section class="services" id="services">
 
