@@ -87,36 +87,35 @@
   100% {
     background-color: var(--primaryColor); } }
 
-.carousel {
-  height: 70vh;
-  margin-bottom: 10rem; }
+.stuff {
+  margin-top: 10rem; }
   @media only screen and (max-width: 37.5em) {
-    .carousel {
-      height: 45rem; } }
+    .stuff {
+      margin-top: 2rem; } }
 
 .opening-hours {
-  padding: 10rem 0; }
+  margin-top: 10rem; }
   @media only screen and (max-width: 37.5em) {
     .opening-hours {
-      padding: 0rem 0; } }
-
-.why-choose {
-  padding: 10rem 0; }
-  @media only screen and (max-width: 37.5em) {
-    .why-choose {
-      padding: 5rem 0; } }
+      margin-top: 2rem; } }
 
 .services {
-  padding: 10rem 0; }
+  margin-top: 10rem; }
   @media only screen and (max-width: 37.5em) {
     .services {
-      padding: 5rem 0; } }
+      margin-top: 2rem; } }
+
+.cases {
+  margin-top: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .cases {
+      margin-top: 2rem; } }
 
 .reviews {
-  padding: 10rem 0; }
+  margin-top: 10rem; }
   @media only screen and (max-width: 37.5em) {
     .reviews {
-      padding: 5rem 0; } }
+      margin-top: 2rem; } }
 
 .footer {
   display: flex;
@@ -136,8 +135,8 @@
   justify-content: center; }
   @media only screen and (max-width: 37.5em) {
     .contact-icons {
-      left: 0.2rem;
-      bottom: 0.2rem; } }
+      left: 0.5rem;
+      bottom: 0.5rem; } }
 
 .contact-icon {
   width: 5rem;
@@ -259,9 +258,8 @@
   animation: scaling 1.5s  infinite; }
 
 .animated-button:hover {
-  background-color: #45a049;
-  transform: scale(1.1);
-  animation: scaling 0s ease-in-out infinite; }
+  background-color: #170a6f;
+  animation: scaling 0s; }
 
 .animated-button img {
   width: 24px;
@@ -306,13 +304,9 @@
 
 .opening-hours-mob {
   text-align: center;
-  display: none;
   font-size: 1.2rem;
   color: var(--primaryColor);
   padding: 2rem 0; }
-  @media only screen and (max-width: 37.5em) {
-    .opening-hours-mob {
-      display: block; } }
 
 .branch__social {
   display: flex;
@@ -340,39 +334,6 @@
   .appoentment:hover {
     transform: translateY(-5px);
     box-shadow: 0px 20px 10px var(--lighterPrimaryColor); }
-
-.why-choose .card-why__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 40rem;
-  padding: 2rem;
-  border-radius: 3rem;
-  transition: all 0.3s ease-out; }
-  @media only screen and (max-width: 37.5em) {
-    .why-choose .card-why__content {
-      border: 0.5px solid #e3e1e1; } }
-  .why-choose .card-why__content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
-    padding: 2rem;
-    border-radius: 3rem; }
-
-.why-choose .card-why__icon {
-  font-size: 10rem;
-  color: var(--lightPrimaryColor);
-  margin-bottom: 2rem; }
-
-.why-choose .card-why__title {
-  font-size: 2rem;
-  color: var(--primaryColor);
-  text-align: center;
-  padding-bottom: 2rem; }
-
-.why-choose .card-why__des {
-  font-size: 1.5rem;
-  color: lightgray;
-  text-align: center; }
 
 .services .card {
   overflow: hidden;
@@ -424,14 +385,13 @@
   .input-group select {
     width: 100%;
     padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 1rem;
+    border: 1px solid #18053e;
     font-size: 1.5rem;
     outline: none;
     transition: all 0.3s ease;
     background-color: transparent;
     color: #777;
-    font-family: "Cairo"; }
+    font-family: "Tajawal"; }
   .input-group label {
     position: absolute;
     top: .5rem;
@@ -452,11 +412,23 @@
   .input-group .date-label {
     padding-right: 2.3rem; }
 
-.btn {
+.second-btn {
   width: 100%;
   padding: 12px;
-  background-color: var(--primaryColor);
+  background-color: var(--lightPrimaryColor);
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; }
+  .second-btn:hover {
+    background-color: gray; }
+
+.btn {
+  padding: 1rem 4rem;
+  background-color: white;
+  color: var(--primaryColor);
   border: none;
   border-radius: 5px;
   cursor: pointer;

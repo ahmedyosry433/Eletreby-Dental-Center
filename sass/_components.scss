@@ -9,8 +9,8 @@
     z-index: 1030;
     justify-content: center;
     @include respond(phone){
-        left: 0.2rem;
-        bottom: 0.2rem;
+        left: 0.5rem;
+        bottom: 0.5rem;
     }
 }
 .contact-icon {
@@ -147,9 +147,8 @@
     animation: scaling 1.5s  infinite; 
 }
 .animated-button:hover {
-    background-color: #45a049;
-    transform: scale(1.1);
-    animation: scaling 0s ease-in-out infinite; 
+    background-color: #170a6f;
+    animation: scaling 0s ; 
 }
 .animated-button img {
     width: 24px;
@@ -212,15 +211,11 @@
     }
     &-mob {
         text-align: center;
-        display: none;
         font-size: 1.2rem;
         color: var(--primaryColor);
         padding: 2rem 0;
         
-        @include respond (phone) {
-            display: block;
-        }
-        
+       
     }
 
 }
@@ -263,53 +258,6 @@
     }
 }
 // End Opening Hours
-
-// Start Why To Choose Us
-.why-choose {
-  
-    .card-why {
-        &__content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 40rem;
-            padding: 2rem;
-            border-radius: 3rem;
-            transition: all 0.3s ease-out;
-            @include respond (phone) {
-                border: 0.5px solid #e3e1e1;
-            }
-            
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
-                padding: 2rem;
-                border-radius: 3rem;
-            }
-
-        }
-        &__icon {
-            font-size: 10rem;
-            color: var(--lightPrimaryColor);
-            margin-bottom: 2rem;
-        }
-        &__title {
-            font-size: 2rem;
-            color: var(--primaryColor);
-            text-align: center;
-            padding-bottom: 2rem;
-        }
-        &__des {
-            font-size: 1.5rem;
-            color: lightgray;
-            text-align: center;
-        }
-    }
-
-
-}
-// End Why To Choose Us
-
 // Start Services
 .services {
    
@@ -385,14 +333,13 @@
             width: 100%;
             
             padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 1rem;
+            border: 1px solid #18053e;
             font-size: 1.5rem;
             outline: none;
             transition: all 0.3s ease;
             background-color: transparent;
             color: #777;
-            font-family: "Cairo";
+            font-family: "Tajawal";
         }
 
         
@@ -425,12 +372,26 @@
             
         }
 }
-// BUTTON
-.btn {
+.second-btn {
     width: 100%;
     padding: 12px;
-    background-color: var(--primaryColor);
+    background-color: var(--lightPrimaryColor);
     color: white;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: gray;
+    }
+}
+// BUTTON
+.btn {
+    padding: 1rem 4rem;
+    background-color: white;
+    color: var(--primaryColor);
     border: none;
     border-radius: 5px;
 
