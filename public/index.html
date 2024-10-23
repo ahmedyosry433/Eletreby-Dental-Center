@@ -183,7 +183,7 @@
         </section>
         <!-- End Landing -->
         <!-- End Slider -->
-         
+
         <!-- Start Stuff -->
         <div class="stuff pt-5" id="stuff">
             <div class="container">
@@ -194,19 +194,21 @@
                                 <div class="img-container">
                                     <img class=" img-fluid clinic-image blurred-image" src="img/c-4.jpeg" alt="">
                                 </div>
-                                <button id="animatedButton"
+                                <button id="openDialogBtn"
                                     class="animated-button position-absolute top-50 start-50 translate-middle ">
                                     <i class="fa-solid fa-play "></i>
                                 </button>
                             </div>
                             <dialog id="videoDialog">
-                                <button id="closeDialog" class="sticky-top"> <i class="fa-solid fa-xmark"></i></button>
-                                <br>
-                                <video id="videoPlayer" controls>
-                                    <source src="https://youtube.com/shorts/-fNzhoOFxNQ?si=9KuHTUrwSrtDevpA"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <div class="dialog-content">
+                                    <!-- Embed YouTube Short video with iframe -->
+                                    <iframe id="youtubeVideo" src="https://www.youtube.com/embed/-fNzhoOFxNQ"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                    <button id="closeDialogBtn" class="btn">Close</button>
+                                </div>
                             </dialog>
                         </div>
                     </div>
@@ -935,41 +937,19 @@
     <!-- End Footer -->
 
     <!-- Script -->
+    <!-- Button to trigger dialog -->
+    <button class="btn" id="openDialogBtn">Watch YouTube Short</button>
+
+    <!-- Dialog element -->
+
+
+
 
     <script>
 
 
-        // Close the dropdown menu if the user clicks outside of it
-        window.addEventListener('click', (event) => {
-            if (!event.target.matches('.menu-button')) {
-                if (menu.classList.contains('show')) {
-                    menu.classList.remove('show');
-                }
-            }
-        });
 
-        // Countries Feild 
-        document.addEventListener('DOMContentLoaded', function () {
-            const countrySelect = document.getElementById('country');
 
-            const countries = [
-                "مصر", "السعودية", "الإمارات", "الكويت", "البحرين", "عمان", "قطر", "العراق", "سوريا", "لبنان",
-                "الأردن", "فلسطين", "اليمن", "السودان", "ليبيا", "تونس", "الجزائر", "المغرب", "موريتانيا",
-                "الصومال", "جيبوتي", "جزر القمر", "الولايات المتحدة", "كندا", "المملكة المتحدة", "فرنسا",
-                "ألمانيا", "إيطاليا", "إسبانيا", "روسيا", "الصين", "اليابان", "كوريا الجنوبية", "الهند",
-                "باكستان", "أفغانستان", "إيران", "تركيا", "اليونان", "قبرص", "مالطا"
-                // Add more countries as needed
-            ];
-
-            countries.sort((a, b) => a.localeCompare(b, 'ar'));
-
-            countries.forEach(country => {
-                const option = document.createElement('option');
-                option.value = country;
-                option.textContent = country;
-                countrySelect.appendChild(option);
-            });
-        });
         window.onscroll = function () {
             var navbar = document.querySelector('.navbar');
 
@@ -980,23 +960,27 @@
                 navbar.classList.remove('scrolled');
             }
         };
-        const button = document.getElementById('animatedButton');
-        const dialog = document.getElementById('videoDialog');
-        const closeButton = document.getElementById('closeDialog');
-        const video = document.getElementById('videoPlayer');
-        // Polyfill for dialog element
-        dialogPolyfill.registerDialog(dialog);
-        // Open dialog and play video when button is clicked
-        button.addEventListener('click', () => {
-            dialog.showModal();
-            video.play();
+        // Get elements
+        const videoDialog = document.getElementById('videoDialog');
+        const openDialogBtn = document.getElementById('openDialogBtn');
+        const closeDialogBtn = document.getElementById('closeDialogBtn');
+        const youtubeVideo = document.getElementById('youtubeVideo');
+
+        // Open dialog when button is clicked
+        openDialogBtn.addEventListener('click', function () {
+            videoDialog.showModal();
         });
 
-        // Close dialog and pause video when close button is clicked
-        closeButton.addEventListener('click', () => {
-            dialog.close();
-            video.pause();
+        // Close dialog when close button is clicked
+        closeDialogBtn.addEventListener('click', function () {
+            videoDialog.close();
+            stopYouTubeVideo();
         });
+
+        // Function to stop the YouTube video playback when dialog is closed
+        function stopYouTubeVideo() {
+            youtubeVideo.src = youtubeVideo.src; // Resetting the iframe src stops the video
+        }
         //_______________MODEL 1 _____________________________________
         //model Dialog
         // Get the modal, card, and close button elements
