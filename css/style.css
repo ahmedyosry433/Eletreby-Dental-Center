@@ -135,8 +135,8 @@
       justify-content: center; }
       @media only screen and (max-width: 37.5em) {
         .contact-icons {
-          left: 0.5rem;
-          bottom: 0.5rem; } }
+          left: 0.2rem;
+          bottom: 0.2rem; } }
     
     .contact-icon {
       width: 5rem;
@@ -195,7 +195,8 @@
       margin-left: 8rem; }
     
     .linar-color {
-      background-image: linear-gradient(to right, #39a2a5, #75a7a8, #b2d1d2); }
+      background: #ebe1ab;
+      background: linear-gradient(223deg, rgba(235, 225, 171, 0.968247) 16%, rgba(235, 225, 171, 0.968247) 21%, #4cf9ff 90%); }
     
     .slide-image {
       width: 100%;
@@ -205,7 +206,7 @@
     
     .slide-container {
       width: 100%;
-      max-width: 80rem;
+      max-width: 90rem;
       /* Adjust this value as needed */
       margin: 0 auto;
       /* Centers the container */ }
@@ -258,8 +259,9 @@
       animation: scaling 1.5s  infinite; }
     
     .animated-button:hover {
-      background-color: #170a6f;
-      animation: scaling 0s; }
+      background-color: #45a049;
+      transform: scale(1.1);
+      animation: scaling 0s ease-in-out infinite; }
     
     .animated-button img {
       width: 24px;
@@ -304,9 +306,13 @@
     
     .opening-hours-mob {
       text-align: center;
+      display: none;
       font-size: 1.2rem;
       color: var(--primaryColor);
       padding: 2rem 0; }
+      @media only screen and (max-width: 37.5em) {
+        .opening-hours-mob {
+          display: block; } }
     
     .branch__social {
       display: flex;
@@ -334,6 +340,39 @@
       .appoentment:hover {
         transform: translateY(-5px);
         box-shadow: 0px 20px 10px var(--lighterPrimaryColor); }
+    
+    .why-choose .card-why__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 40rem;
+      padding: 2rem;
+      border-radius: 3rem;
+      transition: all 0.3s ease-out; }
+      @media only screen and (max-width: 37.5em) {
+        .why-choose .card-why__content {
+          border: 0.5px solid #e3e1e1; } }
+      .why-choose .card-why__content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
+        padding: 2rem;
+        border-radius: 3rem; }
+    
+    .why-choose .card-why__icon {
+      font-size: 10rem;
+      color: var(--lightPrimaryColor);
+      margin-bottom: 2rem; }
+    
+    .why-choose .card-why__title {
+      font-size: 2rem;
+      color: var(--primaryColor);
+      text-align: center;
+      padding-bottom: 2rem; }
+    
+    .why-choose .card-why__des {
+      font-size: 1.5rem;
+      color: lightgray;
+      text-align: center; }
     
     .services .card {
       overflow: hidden;
@@ -385,13 +424,14 @@
       .input-group select {
         width: 100%;
         padding: 10px;
-        border: 1px solid #18053e;
+        border: 2px solid #ddd;
+        border-radius: 1rem;
         font-size: 1.5rem;
         outline: none;
         transition: all 0.3s ease;
         background-color: transparent;
         color: #777;
-        font-family: "Tajawal"; }
+        font-family: "Cairo"; }
       .input-group label {
         position: absolute;
         top: .5rem;
@@ -412,23 +452,10 @@
       .input-group .date-label {
         padding-right: 2.3rem; }
     
-    .second-btn {
-      width: 100%;
-      padding: 12px;
-      background-color: var(--lightPrimaryColor);
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease; }
-      .second-btn:hover {
-        background-color: gray; }
-    
     .btn {
-      padding: 1rem 4rem;
-      background-color: white;
-      color: var(--primaryColor);
+      padding: 12px;
+      background-color: var(--primaryColor);
+      color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -436,6 +463,9 @@
       transition: background-color 0.3s ease; }
       .btn:hover {
         background-color: var(--lightPrimaryColor); }
+    
+    .bookBtn {
+      width: 60%; }
     
     input:invalid, select:invalid {
       animation: shake 0.3s; }
@@ -590,25 +620,6 @@
       cursor: pointer;
       border-radius: 5px;
       margin-top: 10px; }
-    
-    .dialog-content {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 800px;
-      max-width: 90%;
-      max-height: 90%;
-      padding: 0;
-      border: none; }
-    
-    .dialog-content iframe {
-      width: 100%;
-      height: 600px; }
-    
-    #closeDialogBtn {
-      background-color: red;
-      color: white; }
     
     :root {
       --fontColor: #525b5a;

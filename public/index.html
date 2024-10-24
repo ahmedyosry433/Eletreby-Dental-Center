@@ -118,8 +118,7 @@
     <!-- Start Main -->
     <main>
         <!-- Start Slider -->
-        <!-- Start Landing -->
-        <section class="landing linar-color pt-5">
+        <section class="landing linar-color">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-lg-6">
                     <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
@@ -131,21 +130,21 @@
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
                                 aria-label="Slide 3"></button>
                         </div>
-                        <div class="carousel-inner mb-5">
+                        <div class="carousel-inner ">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <div class="slide-container img-liner ">
+                                <div class="slide-container">
                                     <img class="d-block rounded img-fluid slide-image " src="img/c-4.jpeg"
                                         alt="Slider 1">
                                 </div>
                             </div>
                             <div class="carousel-item " data-bs-interval="2000">
-                                <div class="slide-container  img-liner ">
+                                <div class="slide-container ">
                                     <img class="d-block rounded img-fluid slide-image  " src="img/c-5.jpeg"
                                         alt="Slider 2">
                                 </div>
                             </div>
                             <div class="carousel-item " data-bs-interval="2000">
-                                <div class="slide-container  img-liner ">
+                                <div class="slide-container">
                                     <img class="d-block rounded img-fluid slide-image  " src="img/c-3.jpeg"
                                         alt="Slider 3">
                                 </div>
@@ -167,7 +166,7 @@
                 <div class="col-lg-6">
                     <div class="text-center  ">
                         <h1 class="fs-1 fw-bold pb-5">مركز الاتربي لطب الاسنان</h1>
-                        <p class="fs-6 text-black-50 mb-3 fs-2 pb-5  lh-lg">نقدم لك مركز الاتربي لطب الاسنان علي جميع
+                        <p class="fs-6 text-black-100 mb-3 fs-2 pb-5  lh-lg">نقدم لك مركز الاتربي لطب الاسنان علي جميع
                             الخدمات
                             التي
                             نقدمها
@@ -176,12 +175,13 @@
                             للأسنان & تجميل الأسنان ) وغيرها من الخدمات، يقدمها لك فريق طبي مميز مستخدماً أحدث
                             التكولوجيا في مجال طب الأسنان.
                         </p>
-                        <a href="#appientment" class=" btn main-btn rounded-pill border-secondary mb-5">احجز معنا</a>
+                        <a href="#appientment"
+                            class=" btn main-btn rounded-pill border-secondary mb-5 bookBtn w-25">احجز
+                            معنا</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Landing -->
         <!-- End Slider -->
 
         <!-- Start Stuff -->
@@ -208,7 +208,7 @@
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen>
                                     </iframe>
-                                    <button id="closeDialogBtn" class="btn">Close</button>
+                                    <button id="closeDialogBtn" class="btn w-100">Close</button>
                                 </div>
                             </dialog>
                         </div>
@@ -336,16 +336,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="opening-hours-branch bg-light">
-                                <h2>مواعيد العمل الرسمية</h2>
-
-                                <div class="opening-hours-mob">
-                                    <h3>السبت - الخميس : ٣م حتى ١٠م</h3>
-                                    <h3>الجمعه : اجازه</h3>
-                                </div>
-                                <p>مواعيد كل الفروع ويمكنك الحجز عن طريق الاتصال بنا او الواتساب</p>
-                            </div>
-                            <div class="opening-hours-branch bg-light mt-5">
+                            <div class="opening-hours-branch bg-light mb-5">
                                 <h4 class="branch-name">فرع الدقهلية - دماص - مركز ميت غمر</h4>
                                 <div class="phone">
                                     <i class="fa-solid fa-phone-volume"></i>
@@ -369,9 +360,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="opening-hours-branch bg-light">
+                                <h2>مواعيد العمل الرسمية</h2>
+                                <div class="opening-hours text-center mt-5 mb-5">
+                                    <h3>السبت - الخميس : ٣م حتى ١٠م</h3>
+                                    <h3>الجمعه : اجازه</h3>
+                                </div>
+                                <p>مواعيد كل الفروع ويمكنك الحجز عن طريق الاتصال بنا او الواتساب</p>
+                            </div>
+
                         </div>
                         <div class="col-lg-4">
-                            <div class="appoentment mt-4" id="appientment">
+                            <div class="appoentment " id="appientment">
                                 <h2>احجز الان</h2>
                                 <form id="contact-form">
                                     <div class="input-group">
@@ -396,7 +396,7 @@
                                         </select>
                                     </div>
 
-                                    <button class="btn" type="submit">احجز</button>
+                                    <button class="btn w-100 " type="submit">احجز</button>
                                 </form>
                             </div>
                         </div>
@@ -892,14 +892,6 @@
     <!-- End Footer -->
 
     <!-- Script -->
-    <!-- Button to trigger dialog -->
-    <button class="btn" id="openDialogBtn">Watch YouTube Short</button>
-
-    <!-- Dialog element -->
-
-
-
-
     <script>
         window.onscroll = function () {
             var navbar = document.querySelector('.navbar');
@@ -932,164 +924,37 @@
         function stopYouTubeVideo() {
             youtubeVideo.src = youtubeVideo.src; // Resetting the iframe src stops the video
         }
-        //_______________MODEL 1 _____________________________________
-        //model Dialog
-        // Get the modal, card, and close button elements
-        const modal = document.getElementById("modal1");
-        const card = document.getElementById("card1");
-        const closeBtn = document.getElementById("closeBtn");
+        //model
+        function setupModal(cardId, modalId, closeBtnId) {
+            const modal = document.getElementById(modalId);
+            const card = document.getElementById(cardId);
+            const closeBtn = document.getElementById(closeBtnId);
 
-        // Show modal when the card is clicked
-        card.onclick = function () {
-            modal.style.display = "flex"; // Show the modal (set to flex to center it)
-        }
+            // Show modal when the card is clicked
+            card.onclick = function () {
+                modal.style.display = "flex"; // Show the modal (set to flex to center it)
+            }
 
-        // Close modal when the close button is clicked
-        closeBtn.onclick = function () {
-            modal.style.display = "none";
-        }
+            // Close modal when the close button is clicked
+            closeBtn.onclick = function () {
+                modal.style.display = "none";
+            }
 
-
-        //////////////////////////////////////MODEL2________________________
-        const modal2 = document.getElementById("modal2");
-        const card2 = document.getElementById("card2");
-        const closeBtn2 = document.getElementById("closeBtn2");
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal2) {
-                modal2.style.display = "none";
+            // Close the modal when clicking outside the modal content
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
         }
 
-        // Show modal when the card is clicked
-        card2.onclick = function () {
-            modal2.style.display = "flex"; // Show the modal (set to flex to center it)
-        }
-
-        // Close modal when the close button is clicked
-        closeBtn2.onclick = function () {
-            modal2.style.display = "none";
-        }
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal3) {
-                modal2.style.display = "none";
-            }
-        }
-        //////////////////////////////////////MODEL3________________________
-        const modal3 = document.getElementById("modal3");
-        const card3 = document.getElementById("card3");
-        const closeBtn3 = document.getElementById("closeBtn3");
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal3) {
-                modal3.style.display = "none";
-            }
-        }
-
-        // Show modal when the card is clicked
-        card3.onclick = function () {
-            modal3.style.display = "flex"; // Show the modal (set to flex to center it)
-        }
-
-        // Close modal when the close button is clicked
-        closeBtn3.onclick = function () {
-            modal3.style.display = "none";
-        }
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal3) {
-                modal3.style.display = "none";
-            }
-        }
-        //////////////////////////////////////MODEL4________________________
-        const modal4 = document.getElementById("modal4");
-        const card4 = document.getElementById("card4");
-        const closeBtn4 = document.getElementById("closeBtn4");
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal4) {
-                modal4.style.display = "none";
-            }
-        }
-
-        // Show modal when the card is clicked
-        card4.onclick = function () {
-            modal4.style.display = "flex"; // Show the modal (set to flex to center it)
-        }
-
-        // Close modal when the close button is clicked
-        closeBtn4.onclick = function () {
-            modal4.style.display = "none";
-        }
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal4) {
-                modal4.style.display = "none";
-            }
-        }
-        //////////////////////////////////////MODEL5________________________
-        const modal5 = document.getElementById("modal5");
-        const card5 = document.getElementById("card5");
-        const closeBtn5 = document.getElementById("closeBtn5");
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal5) {
-                modal5.style.display = "none";
-            }
-        }
-
-        // Show modal when the card is clicked
-        card5.onclick = function () {
-            modal5.style.display = "flex"; // Show the modal (set to flex to center it)
-        }
-
-        // Close modal when the close button is clicked
-        closeBtn5.onclick = function () {
-            modal5.style.display = "none";
-        }
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal5) {
-                modal5.style.display = "none";
-            }
-        }
-        //////////////////////////////////////MODEL6________________________
-        const modal6 = document.getElementById("modal6");
-        const card6 = document.getElementById("card6");
-        const closeBtn6 = document.getElementById("closeBtn6");
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal6) {
-                modal6.style.display = "none";
-            }
-        }
-
-        // Show modal when the card is clicked
-        card6.onclick = function () {
-            modal6.style.display = "flex"; // Show the modal (set to flex to center it)
-        }
-
-        // Close modal when the close button is clicked
-        closeBtn6.onclick = function () {
-            modal6.style.display = "none";
-        }
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function (event) {
-            if (event.target == modal6) {
-                modal6.style.display = "none";
-            }
-        }
+        // Set up modals for each card and modal pair
+        setupModal('card1', 'modal1', 'closeBtn');
+        setupModal('card2', 'modal2', 'closeBtn2');
+        setupModal('card3', 'modal3', 'closeBtn3');
+        setupModal('card4', 'modal4', 'closeBtn4');
+        setupModal('card5', 'modal5', 'closeBtn5');
+        setupModal('card6', 'modal6', 'closeBtn6');
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

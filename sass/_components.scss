@@ -9,8 +9,8 @@
     z-index: 1030;
     justify-content: center;
     @include respond(phone){
-        left: 0.5rem;
-        bottom: 0.5rem;
+        left: 0.2rem;
+        bottom: 0.2rem;
     }
 }
 .contact-icon {
@@ -81,7 +81,8 @@
 // End Navigation
 .linar-color {
   
-    background-image:linear-gradient(to right, #39a2a5, #75a7a8,#b2d1d2 );
+    background: rgb(235,225,171);
+    background: linear-gradient(223deg, rgba(235,225,171,0.9682466736694678) 16%, rgba(235,225,171,0.9682466736694678) 21%, rgba(76,249,255,1) 90%);
 
 }
 
@@ -94,7 +95,7 @@
 }
 .slide-container {
     width: 100%;
-    max-width: 80rem; /* Adjust this value as needed */
+    max-width: 90rem; /* Adjust this value as needed */
     margin: 0 auto; /* Centers the container */
 }
 .img-liner {
@@ -147,8 +148,9 @@
     animation: scaling 1.5s  infinite; 
 }
 .animated-button:hover {
-    background-color: #170a6f;
-    animation: scaling 0s ; 
+    background-color: #45a049;
+    transform: scale(1.1);
+    animation: scaling 0s ease-in-out infinite; 
 }
 .animated-button img {
     width: 24px;
@@ -211,11 +213,15 @@
     }
     &-mob {
         text-align: center;
+        display: none;
         font-size: 1.2rem;
         color: var(--primaryColor);
         padding: 2rem 0;
         
-       
+        @include respond (phone) {
+            display: block;
+        }
+        
     }
 
 }
@@ -258,6 +264,53 @@
     }
 }
 // End Opening Hours
+
+// Start Why To Choose Us
+.why-choose {
+  
+    .card-why {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 40rem;
+            padding: 2rem;
+            border-radius: 3rem;
+            transition: all 0.3s ease-out;
+            @include respond (phone) {
+                border: 0.5px solid #e3e1e1;
+            }
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0px 10px 10px var(--lighterPrimaryColor);
+                padding: 2rem;
+                border-radius: 3rem;
+            }
+
+        }
+        &__icon {
+            font-size: 10rem;
+            color: var(--lightPrimaryColor);
+            margin-bottom: 2rem;
+        }
+        &__title {
+            font-size: 2rem;
+            color: var(--primaryColor);
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+        &__des {
+            font-size: 1.5rem;
+            color: lightgray;
+            text-align: center;
+        }
+    }
+
+
+}
+// End Why To Choose Us
+
 // Start Services
 .services {
    
@@ -333,13 +386,14 @@
             width: 100%;
             
             padding: 10px;
-            border: 1px solid #18053e;
+            border: 2px solid #ddd;
+            border-radius: 1rem;
             font-size: 1.5rem;
             outline: none;
             transition: all 0.3s ease;
             background-color: transparent;
             color: #777;
-            font-family: "Tajawal";
+            font-family: "Cairo";
         }
 
         
@@ -375,7 +429,7 @@
 .second-btn {
     width: 100%;
     padding: 12px;
-    background-color: var(--lightPrimaryColor);
+    background-color: var(--primaryColor);
     color: white;
     border: none;
     border-radius: 5px;
@@ -389,9 +443,9 @@
 }
 // BUTTON
 .btn {
-    padding: 1rem 4rem;
-    background-color: white;
-    color: var(--primaryColor);
+    padding: 12px;
+    background-color: var(--primaryColor);
+    color: white;
     border: none;
     border-radius: 5px;
 
@@ -401,6 +455,10 @@
     &:hover {
         background-color: var(--lightPrimaryColor);
     }
+}
+
+.bookBtn{
+    width: 60%;
 }
 input:invalid, select:invalid {
     animation: shake 0.3s;
@@ -598,8 +656,6 @@ input:invalid, select:invalid {
     border-radius: 5px;
     margin-top: 10px;
   }
-
-
 
 
   //////////////////////////
